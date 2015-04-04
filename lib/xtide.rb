@@ -25,8 +25,8 @@ class Xtide
     @now ||= load_now
   end
 
-  def basic_command
-    "cd #{path}; ./tide #{default_arguments}"
+  def execute( options='' )
+    `cd #{path}; ./tide #{default_arguments} #{options}`
   end
 
   private
@@ -34,7 +34,7 @@ class Xtide
   def load_events
     [].tap do |events|
 
-      output = `#{basic_command} -m p`
+      output = execute '-m p'
       CSV.parse( output ) do |location, date, time, height, event_type|
 
         timestamp = Time.parse( "#{date} #{time}" )
@@ -55,7 +55,7 @@ class Xtide
 
   def load_graph_data
     interval = '00:30' # HH:MM
-    output = `#{basic_command} -m r -s "#{interval}"`
+    output = execute %( -m r -s "#{interval}" )
 
     padding = 60*60 # one hour
 
@@ -78,7 +78,7 @@ class Xtide
   end
 
   def load_now
-    output = `#{basic_command} -m n`
+    output = execute '-m n'
 
     _, epoch, height = output.strip.split(',')
 
