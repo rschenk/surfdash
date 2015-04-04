@@ -1,0 +1,39 @@
+body {
+  background: #f2f2f2;
+  font-family: "Open Sans";
+}
+
+.wrapper {
+  width: 640px;
+  margin: auto
+}
+
+section {
+  margin-top: 1em;
+}
+
+.cam-wrapper {
+  height: 360px;
+  width: 640px;
+  box-shadow: 0px 0px 1px 0px rgba(170,170,170,1);
+}
+
+/* Tide Chart */
+.line {
+  fill: none;
+  stroke: #e0e0e0;
+  stroke-width: 1px
+}
+
+.area {
+  fill: #eaeaea;
+  stroke: none;
+}
+
+.now {
+  fill: red;
+}
+
+svg text {
+  font-size: 11px;
+}
