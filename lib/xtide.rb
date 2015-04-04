@@ -35,10 +35,11 @@ class Xtide
     [].tap do |events|
 
       output = `#{basic_command} -m p`
-      CSV.parse( output ) do |row|
-        location, date, time, height, event_type = row
+      CSV.parse( output ) do |location, date, time, height, event_type|
 
         timestamp = Time.parse( "#{date} #{time}" )
+
+        # Constrain data to only within our start and end times
         next  if timestamp < start_t
         break if timestamp > end_t
 
@@ -59,10 +60,12 @@ class Xtide
     padding = 60*60 # one hour
 
     [].tap do |graph_data|
-      CSV.parse( output ) do |row|
-        location, epoch, height = row
+      CSV.parse( output ) do |location, epoch, height|
 
         timestamp = Time.at( epoch.to_i )
+
+        # Constrain data to only within our start and end times
+        # plus a little extra to make sure the graph is smooth on the ends
         next  if timestamp < ( start_t - padding )
         break if timestamp > ( end_t   + padding )
 
@@ -77,17 +80,9 @@ class Xtide
   def load_now
     output = `#{basic_command} -m n`
 
-    location, epoch, height = output.strip.split(',')
+    _, epoch, height = output.strip.split(',')
 
     [ Time.at( epoch.to_i ), height.to_f ]
-  end
-
-  def midnight
-    @midnight ||= Date.today.to_time
-  end
-
-  def tomorrow
-    @tomorrow ||= Date.today.next_day.to_time
   end
 
   def default_arguments
