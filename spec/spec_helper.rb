@@ -1,6 +1,8 @@
 require 'bundler/setup'
 require 'rack/test'
 require 'rspec'
+require 'rspec/its'
+require 'vcr'
 
 require_relative '../app.rb'
 
@@ -11,5 +13,12 @@ module RSpecMixin
   def app() Sinatra::Application end
 end
 
-# For RSpec 2.x
-RSpec.configure { |c| c.include RSpecMixin }
+RSpec.configure do |c|
+  c.include RSpecMixin
+end
+
+VCR.configure do |config|
+  config.cassette_library_dir = File.expand_path('../fixtures/vcr', __FILE__ )
+  config.hook_into :webmock
+  config.configure_rspec_metadata!
+end

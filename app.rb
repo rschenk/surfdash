@@ -2,13 +2,13 @@ require 'bundler/setup'
 require 'sinatra'
 require 'sinatra/json'
 require './lib/xtide'
+require './lib/surfline_scraper'
 
 get '/' do
   erb :index
 end
 
 get '/tide.json' do
-
   xtide = Xtide.new
 
   json({
@@ -18,5 +18,17 @@ get '/tide.json' do
     events: xtide.events,
     graph: xtide.graph_data
   })
+end
 
+get '/surfline' do
+  # require 'vcr'
+  #
+  # VCR.configure do |config|
+  #   config.cassette_library_dir = File.expand_path('../spec/fixtures/vcr', __FILE__ )
+  #   config.hook_into :webmock
+  # end
+  #
+  # VCR.insert_cassette('surfline_scraper')
+
+  erb :surfline, locals: { surfline: SurflineScraper.new }
 end
