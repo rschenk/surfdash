@@ -1,5 +1,6 @@
 require 'open-uri'
 require 'nokogiri'
+require 'chronic'
 
 class SurflineScraper
   attr_accessor :url
@@ -11,14 +12,13 @@ class SurflineScraper
   end
 
   def updated_at
-    @updated_at ||= doc.
-      at_css('#observed-wave-range').
-      parent.
-      children.
+    @updated_at ||= Chronic.parse(
+      doc.at_css('#observed-wave-range').
+      parent.children.
       find{|n| n.text =~ /updated/ }.
       first_element_child.
-      text.
-      strip
+      text.strip
+    )
   end
 
   def wave_range
@@ -31,10 +31,6 @@ class SurflineScraper
 
   def spot_conditions
     @spot_conditions ||= doc.at_css('#observed-spot-conditions').text.strip
-  end
-
-  def spot_conditions_class
-    spot_conditions.downcase.gsub(/\W+/, '-')
   end
 
   def spot_conditions_report

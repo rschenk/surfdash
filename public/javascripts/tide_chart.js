@@ -2,7 +2,7 @@
 
   var margin = { top: 2, right: 0, bottom: 2, left: 0 };
   var width = 640 - margin.left - margin.right;
-  var height = 70 - margin.top - margin.bottom;
+  var height = 60 - margin.top - margin.bottom;
 
   var parse_time = d3.time.format.utc('%Y-%m-%d %H:%M:%S %Z').parse;
   var format_time = d3.time.format('%-I:%M %p');

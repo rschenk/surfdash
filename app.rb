@@ -3,6 +3,7 @@ require 'sinatra'
 require 'sinatra/json'
 require './lib/xtide'
 require './lib/surfline_scraper'
+require './lib/surfline_presenter'
 
 get '/' do
   erb :index
@@ -30,5 +31,5 @@ get '/surfline' do
   #
   # VCR.insert_cassette('surfline_scraper')
 
-  erb :surfline, locals: { surfline: SurflineScraper.new }
+  erb :surfline, locals: { surfline: SurflinePresenter.new(SurflineScraper.new) }
 end

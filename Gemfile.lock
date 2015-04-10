@@ -3,6 +3,7 @@ GEM
   specs:
     addressable (2.3.8)
     backports (3.6.4)
+    chronic (0.10.2)
     crack (0.4.2)
       safe_yaml (~> 1.0.0)
     diff-lcs (1.2.5)
@@ -53,6 +54,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  chronic
   nokogiri
   rack-test
   rspec

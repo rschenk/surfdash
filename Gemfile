@@ -9,6 +9,9 @@ gem 'sinatra-contrib'
 # HTML parser
 gem 'nokogiri'
 
+# Natural language date parser
+gem 'chronic'
+
 group :test do
   # test framework
   gem 'rack-test'

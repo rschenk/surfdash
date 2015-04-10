@@ -10,7 +10,7 @@ describe SurflineScraper, vcr: { cassette_name: 'surfline_scraper' } do
     end
   end
 
-  its(:updated_at){ should eq 'Saturday, April 4 at 12:55 pm' }
+  its(:updated_at){ should eq Chronic.parse('Saturday, April 4 at 12:55 pm') }
   its(:wave_range){ should eq '1-2 ft' }
   its(:wave_description){ should match(/ankle/) }
   its(:spot_conditions){ should eq 'poor Conditions' }

@@ -15,6 +15,10 @@ section {
   margin-top: 1em;
 }
 
+section.wind-alert-wrapper {
+  margin-top: 0;
+}
+
 .cam-wrapper {
   height: 360px;
   width: 640px;
