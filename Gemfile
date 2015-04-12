@@ -21,4 +21,7 @@ group :test do
   # for mocking out http requests
   gem 'vcr'
   gem 'webmock'
+
+  # simple debugger
+  gem 'pry'
 end
