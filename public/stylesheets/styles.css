@@ -46,6 +46,10 @@ section.wind-alert-wrapper {
 }
 
 /* Surfline Report */
+.surfline-report-wrapper{
+  cursor: pointer;
+}
+
 .wave-range {
   font-size: 18px;
   font-weight: 600;
@@ -77,4 +81,22 @@ section.wind-alert-wrapper {
 
 .updated-at {
   font-style: italic;
+}
+
+/* Wider screen */
+@media screen and (min-width:980px) {
+
+  .wrapper {
+    width: 960px;
+  }
+
+  .cams-and-graphs {
+    width: 640px;
+    float: left;
+  }
+
+  .reports {
+    width: 300px;
+    float: right;
+  }
 }

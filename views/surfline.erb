@@ -7,5 +7,6 @@
 
 <div class='updated-at'><%= surfline.updated_at_string %></div>
 
-<p class='spot-conditions-report'><%= surfline.spot_conditions_report
- %></p>
+<p class='spot-conditions-report <%= surfline.seen_it_already_class %>'>
+  <%= surfline.spot_conditions_report %>
+</p>

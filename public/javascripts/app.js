@@ -2,6 +2,19 @@
 
   $.get( '/surfline', function( content ){
     $('#surfline-report-wrapper').html( content );
+
+
+    var $spot_conditions_report = $('.spot-conditions-report');
+
+    if( $spot_conditions_report.hasClass('seen-it-already') ) {
+      $spot_conditions_report.hide();
+    }
+
+    $('#surfline-report-wrapper').click(function(){
+      $spot_conditions_report.slideToggle('fast');
+      return false;
+    });
+
   });
 
 })();

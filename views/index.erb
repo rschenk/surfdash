@@ -8,30 +8,34 @@
   <body>
     <div class="wrapper">
 
-      <section class="cam-wrapper">
-        <iframe width="640" height="360" src="http://e.cdn-surfline.com/syndication/embed/v1/player.html?id=4421" frameborder="0" scrolling="no" allowfullscreen></iframe>
-      </section>
+      <div class="cams-and-graphs">
+        <section class="cam-wrapper">
+          <iframe width="640" height="360" src="http://e.cdn-surfline.com/syndication/embed/v1/player.html?id=4421" frameborder="0" scrolling="no" allowfullscreen></iframe>
+        </section>
 
-      <section id="tide-chart" class="tide-chart">
-      </section>
+        <section id="tide-chart" class="tide-chart">
+        </section>
 
-      <section class="wind-alert-wrapper">
-        <div class="wind-alert-map-wrapper" style="width: 213px; height: 245px; float: left">
-          <iframe align="top" name="wind-map" id="wind-map" src="http://widgets.windalert.com/widgets/web/windMap?w=213&h=245&c=f2f2f2&set_ctl=all&m_m=t&csn= &search=28.36768,-80.60058&sn=Cocoa Beach Pier&sid=550&u_t=F&act=Kite&m_c=28.368,-80.601&m_z=11&app=windalert" width="213" height="245" frameborder="0" scrolling="no" allowtransparency="no"></iframe>
-        </div>
+        <section class="wind-alert-wrapper">
+          <div class="wind-alert-map-wrapper" style="width: 213px; height: 245px; float: left">
+            <iframe align="top" name="wind-map" id="wind-map" src="http://widgets.windalert.com/widgets/web/windMap?w=213&h=245&c=f2f2f2&set_ctl=all&m_m=t&csn= &search=28.36768,-80.60058&sn=Cocoa Beach Pier&sid=550&u_t=F&act=Kite&m_c=28.368,-80.601&m_z=11&app=windalert" width="213" height="245" frameborder="0" scrolling="no" allowtransparency="no"></iframe>
+          </div>
 
-        <div class="wind-alert-graph-wrapper">
-          <iframe align="top" src="http://widgets.windalert.com/widgets/web/currentConditions?spot_id=550&units_wind=mph&units_temp=F&width=426&height=245&color=f2f2f2&name= &activity=Kite&app=windalert" width="426" height="245" frameborder="0" scrolling="no" allowtransparency="no"></iframe>
-        </div>
+          <div class="wind-alert-graph-wrapper">
+            <iframe align="top" src="http://widgets.windalert.com/widgets/web/currentConditions?spot_id=550&units_wind=mph&units_temp=F&width=426&height=245&color=f2f2f2&name= &activity=Kite&app=windalert" width="426" height="245" frameborder="0" scrolling="no" allowtransparency="no"></iframe>
+          </div>
 
-      </section>
+        </section>
+      </div>
 
-      <section class="reports-wrapper">
-        <div id="surfline-report-wrapper" class="surfline-report-wrapper">
-        </div>
-      </section>
-
+      <div class="reports">
+        <section class="reports-wrapper">
+          <div id="surfline-report-wrapper" class="surfline-report-wrapper">
+          </div>
+        </section>
+      </div>
     </div>
+
   </body>
   <script src="javascripts/lib/d3.min.js"></script>
   <script src="javascripts/lib/jquery-2.1.3.min.js"></script>
