@@ -76,14 +76,11 @@
         .text( function(d){ return format_time(d[0]); });
 
     // Indicator for current time
-    svg.append('rect')
+    svg.append('circle')
       .attr('class', 'now')
-      .attr('x', x(data.now[0]) )
-      .attr('y', y(data.now[1]) )
-      .attr('width', 5 )
-      .attr('height', 5 )
-      .attr('transform',  'rotate(45 '+ x(data.now[0]) +' '+ y(data.now[1]) +') translate(-2.5 -2.5)');
-
+      .attr('cx', x(data.now[0]) )
+      .attr('cy', y(data.now[1]) )
+      .attr('r', 2 );
   });
 
 })();
