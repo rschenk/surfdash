@@ -24,4 +24,7 @@ group :test do
 
   # simple debugger
   gem 'pry'
+
+  # freeze time
+  gem 'timecop'
 end

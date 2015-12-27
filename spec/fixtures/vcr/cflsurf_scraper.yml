@@ -1,0 +1,190 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://cflsurf.com/aa-outlook.txt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.8.0
+      Date:
+      - Mon, 17 Aug 2015 16:03:39 GMT
+      Content-Type:
+      - text/plain
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Last-Modified:
+      - Sun, 16 Aug 2015 10:37:37 GMT
+    body:
+      encoding: ASCII-8BIT
+      string: |+
+        OutlookText = "<p><b> Aug 16 (Sun) - </b> It doesn't look like we will be surfing much this weekend or the coming week either. Very small surf (0 to lucky 2 foot range) continues with no end in sight. There are some small storms building off the coast of Africa in the cane corridor, but nothing significant yet. I added the link to a new buoy located about 1/2 mile off shore from the Melb Boardwalk. I called it the 1/2-mile buoy. The link is in the Surf Forecast box. Most of you will want to see the Indialantic buoy, but there is also a buoy off Jensen Beach. "
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    http_version: 
+  recorded_at: Mon, 17 Aug 2015 16:03:38 GMT
+recorded_with: VCR 2.9.3

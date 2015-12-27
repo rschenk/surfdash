@@ -3,6 +3,8 @@ require 'rack/test'
 require 'rspec'
 require 'rspec/its'
 require 'vcr'
+require 'timecop'
+require 'pry'
 
 require_relative '../app.rb'
 

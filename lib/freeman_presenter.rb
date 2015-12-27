@@ -1,22 +1,16 @@
 require 'yaml/store'
 
-class SurflinePresenter < SimpleDelegator
+class FreemanPresenter < SimpleDelegator
 
-  attr_reader :last_viewed_at
+  attr_accessor :last_viewed_at
+  attr_accessor :store
 
-  def initialize(*args)
-    super
-
-    store.transaction do
-      key = [ self.class.name, 'last_viewed_at' ].join('_').to_sym
-
-      @last_viewed_at = store[ key ]
-      store[ key ] = Time.now
-    end
+  def conditions
+    [ conditions_report, super ].map{|s| punctuate(s) }.join(' ')
   end
 
   def seen_it_already?
-    last_viewed_at && last_viewed_at > updated_at
+    last_viewed_at > updated_at
   end
 
   def seen_it_already_class
@@ -27,14 +21,27 @@ class SurflinePresenter < SimpleDelegator
     @updated_at_string ||= updated_at.strftime( updated_at_format )
   end
 
-  def spot_conditions_class
-    spot_conditions.downcase.gsub(/\W+/, '-')
+  def last_viewed_at
+    return @last_viewed_at unless @last_viewed_at.nil?
+
+    store.transaction do
+      key = [ self.class.name, 'last_viewed_at' ].join('_').to_sym
+
+      @last_viewed_at = store[ key ]
+      store[ key ] = Time.now
+    end
+
+    @last_viewed_at
+  end
+
+  def store
+    @store ||= YAML::Store.new('db/surfdash.yml')
   end
 
   private
 
-  def store
-    @store ||= YAML::Store.new('db/surfdash.yml')
+  def punctuate(str)
+    str.sub(/\W$/,'') << '.'
   end
 
   def updated_at_format

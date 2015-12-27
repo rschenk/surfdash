@@ -10,6 +10,9 @@
   var x = d3.time.scale().range( [0, width] );
   var y = d3.scale.linear().range( [ height, 0 ] );
 
+  var xRound = d3.time.scale().rangeRound( x.range() );
+  var yRound = d3.scale.linear().rangeRound( y.range() );
+
   var line = d3.svg.line()
         .x(function(d){ return x(d[0]); })
         .y(function(d){ return y(d[1]); })
@@ -47,6 +50,9 @@
     x.domain( [ data.start, data.end ] );
     y.domain( d3.extent( data.graph, function(d){ return d[1]; } ) );
 
+    xRound.domain( x.domain() );
+    yRound.domain( y.domain() );
+
     // Draw the chart
     chart.append('path')
       .datum( data.graph )
@@ -63,14 +69,14 @@
       .data( data.events )
       .enter().append('circle')
         .attr('r', 1)
-        .attr('cx', function(d){ return x(d[0]); })
-        .attr('cy', function(d){ return y(d[1]); });
+        .attr('cx', function(d){ return xRound(d[0]); })
+        .attr('cy', function(d){ return yRound(d[1]); });
 
     events.selectAll('text')
       .data( data.events )
       .enter().append('text')
-        .attr('x', function(d){ return x(d[0]); })
-        .attr('y', function(d){ return y(d[1]); })
+        .attr('x', function(d){ return xRound(d[0]); })
+        .attr('y', function(d){ return yRound(d[1]); })
         .attr('dy',function(d){ return (d[2] == 'High Tide') ? '14px' : '-6px'; } )
         .attr('text-anchor', 'middle')
         .text( function(d){ return format_time(d[0]); });
@@ -78,8 +84,8 @@
     // Indicator for current time
     svg.append('circle')
       .attr('class', 'now')
-      .attr('cx', x(data.now[0]) )
-      .attr('cy', y(data.now[1]) )
+      .attr('cx', xRound(data.now[0]) )
+      .attr('cy', yRound(data.now[1]) )
       .attr('r', 2 );
   });
 

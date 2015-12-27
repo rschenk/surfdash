@@ -1,0 +1,28 @@
+<header>
+  <h3>Freeman</h3>
+  <div class='updated-at'><%= freeman.updated_at_string %></div>
+</header>
+
+<div class='conditions'>
+  <span class='conditions'><%= freeman.conditions %></span>
+</div>
+
+<div class='pier-conditions'>
+  <h4>Pier</h4>
+  <div class='ratings'>
+    <span class='rating shortboard'><%= freeman.pier_sb_rating %></span>
+    <span class='rating longboard'><%= freeman.pier_lb_rating %></span>
+  </div>
+  <span class='pier-conditions-report'><%= freeman.pier_conditions_report %></span>
+  <span class='pier-conditions'><%= freeman.pier_conditions %></span>
+</div>
+
+<div class='pafb-conditions'>
+  <h4>Patrick</h4>
+  <div class='ratings'>
+    <span class='rating shortboard'><%= freeman.pafb_sb_rating %></span>
+    <span class='rating longboard'><%= freeman.pafb_lb_rating %></span>
+  </div>
+  <span class='pafb-conditions-report'><%= freeman.pafb_conditions_report %></span>
+  <span class='pafb-conditions'><%= freeman.pafb_conditions %></span>
+</div>

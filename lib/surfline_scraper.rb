@@ -1,14 +1,12 @@
-require 'open-uri'
+require_relative './browser'
 require 'nokogiri'
 require 'chronic'
 
 class SurflineScraper
   attr_accessor :url
-  attr_accessor :user_agent
 
   def initialize(url=nil)
     @url = url || 'http://www.surfline.com/surf-report/cocoa-beach-pier-florida_4421/'
-    @user_agent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.75.14 (KHTML, like Gecko) Version/7.0.3 Safari/7046A194A'
   end
 
   def updated_at
@@ -40,7 +38,7 @@ class SurflineScraper
   private
 
   def doc
-    @doc ||= Nokogiri::HTML( open( url, 'User-Agent' => user_agent ))
+    @doc ||= Nokogiri::HTML( Browser.new.get(url) )
   end
 
 end

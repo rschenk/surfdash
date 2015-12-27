@@ -1,8 +1,8 @@
 require_relative './spec_helper'
-require_relative '../lib/bob_freeman_scraper'
+require_relative '../lib/freeman_scraper'
 
-describe BobFreemanScraper, vcr: { cassette_name: 'bob_freeman_sunday' } do
-  subject(:scraper){ BobFreemanScraper.new }
+describe FreemanScraper, vcr: { cassette_name: 'freeman_sunday' } do
+  subject(:scraper){ FreemanScraper.new }
 
   describe '#initialize' do
     it 'defaults the URL to the pier report' do

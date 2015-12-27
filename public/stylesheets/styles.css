@@ -1,7 +1,7 @@
 body {
   background: #f2f2f2;
   font-family: "Open Sans";
-  color: #333;
+  color: #515151;
   font-size: 12px;
   line-height: 18px
 }
@@ -46,11 +46,41 @@ section.wind-alert-wrapper {
 }
 
 /* Surfline Report */
+.report-wrapper {
+  margin-bottom: 36px;
+}
+
+.report-wrapper header {
+  overflow: hidden;
+  background: #eaeaea;
+  height: 24px;
+  margin-bottom: 12px;
+}
+.report-wrapper header h3 {
+  float: left;
+  margin: 0 0 0 0.5em;
+  font-size: 12px;
+  line-height: 24px;
+  color: #BABABA;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.report-wrapper header .updated-at {
+  float: right;
+  background-color: #F2F2F2;
+  font-size: 11px;
+  line-height: 20px;
+  border: 2px solid #eaeaea;
+  padding: 0 0.5em;
+  color: #515151;
+}
 .surfline-report-wrapper{
   cursor: pointer;
 }
 
-.wave-range {
+.wave-range,
+.ratings {
   font-size: 18px;
   font-weight: 600;
 }
@@ -75,12 +105,31 @@ section.wind-alert-wrapper {
   background: linear-gradient(to bottom right, rgba(70,130,180,1) 50%, rgba(76,186,149,1) 51%);
 }
 
-.spot-conditions.fair-conditions {
+.spot-conditions.fair-conditions,
+.spot-conditions.fair-to-good-conditions {
   background-color: #4CBA95;
+}
+
+.spot-conditions.good-conditions,
+.spot-conditions.very-good-conditions {
+  background-color: #fd9827;
 }
 
 .updated-at {
   font-style: italic;
+}
+
+.ratings .rating {
+  background-image: url(../images/board-sprite.svg);
+  background-size: 6px 50px;
+  background-repeat: no-repeat;
+  background-position: top left;
+  padding-left: 8px;
+  margin-right: 0.5em;
+}
+
+.ratings .rating.shortboard {
+  background-position: 0 -28px;
 }
 
 /* Wider screen */

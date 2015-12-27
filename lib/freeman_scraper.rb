@@ -1,10 +1,9 @@
-require 'open-uri'
+require_relative './browser'
 require 'nokogiri'
 require 'chronic'
 
-class BobFreemanScraper
+class FreemanScraper
   attr_accessor :url
-  attr_accessor :user_agent
 
   attr_reader :conditions
   attr_reader :conditions_report
@@ -15,7 +14,6 @@ class BobFreemanScraper
 
   def initialize(url=nil)
     @url = url || 'http://www.gosurfsportswear.com/piercam/pier.html'
-    @user_agent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.75.14 (KHTML, like Gecko) Version/7.0.3 Safari/7046A194A'
 
     load_page
   end
@@ -51,7 +49,7 @@ class BobFreemanScraper
   end
 
   def doc
-    @doc ||= Nokogiri::HTML( open( url, 'User-Agent' => user_agent ))
+    @doc ||= Nokogiri::HTML(Browser.new.get(url))
   end
 
   def striptags(str)
