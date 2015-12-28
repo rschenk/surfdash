@@ -63,7 +63,7 @@ class FreemanScraper
   end
 
   def load_report
-    match_data = report_td.inner_html.match(/DP Peek\.\.\.(.*?)Pier\.\.\./m)
+    match_data = report_td.inner_html.match(/Peek\.\.\.(.*?)Pier\.\.\./m)
     fragment = Nokogiri::HTML::fragment( match_data[1] )
 
     @conditions = fragment.search('i').text.strip
