@@ -132,6 +132,41 @@ section.wind-alert-wrapper {
   background-position: 0 -28px;
 }
 
+/* Weather report styling */
+.report-wrapper.weather-report-wrapper {
+  margin-bottom: 18px;
+  text-align: right;
+}
+
+.weather__current {
+  position: relative;
+}
+.weather__desc {
+  display: inline-block;
+  position: absolute;
+  right: 24px;
+  margin: 0;
+}
+  .weather__time {
+    display: none;
+  }
+
+.weather__icon svg {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  margin: 0;
+}
+.weather .u-h {
+  display: none;
+}
+
+.weather__toggle-forecast,
+.js-weather-forecast,
+.weather__location {
+  display: none;
+}
+
 /* Wider screen */
 @media screen and (min-width:980px) {
 

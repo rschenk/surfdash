@@ -17,10 +17,13 @@
 
   });
 
+  $.get( '/weather', function( content ){
+    $('#weather-report-wrapper').html( content );
+  });
+
   $.get( '/cflsurf', function( content ){
     $('#cflsurf-report-wrapper').html( content );
   });
-
 
   $.get( '/freeman', function( content ){
     $('#freeman-report-wrapper').html( content );

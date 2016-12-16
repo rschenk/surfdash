@@ -32,7 +32,7 @@ class CheckthewavesPresenter < SimpleDelegator
   end
 
   def water_temp_bottom
-    super.gsub(' F', ' &#8457;')
+    super.gsub(' F', '&#8457;')
   end
 
   def store

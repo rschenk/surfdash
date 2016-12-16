@@ -71,3 +71,8 @@ end
 get '/checkthewaves' do
   erb :checkthewaves, locals: { checkthewaves: CheckthewavesPresenter.new(CheckthewavesScraper.new) }
 end
+
+get '/weather' do
+  weather = JSON.parse Browser.new.get('https://api.nextgen.guardianapps.co.uk/weatherapi/city/2230945.json?_edition=us').read
+  weather['html']
+end
