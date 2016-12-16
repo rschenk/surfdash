@@ -19,4 +19,19 @@ describe Browser, vcr: { cassette_name: 'browser' } do
       end
     end
   end
+
+  describe '#save' do
+    context 'given a url and a file' do
+      let(:url){ 'http://cflsurf.com/' }
+      let(:file){ Tempfile.new('test') }
+      after{ file.unlink }
+
+      it 'writes the body to the file' do
+        browser.save(url, file)
+
+        expect(file.read).to match(/<html/)
+
+      end
+    end
+  end
 end

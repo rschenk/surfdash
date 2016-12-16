@@ -25,4 +25,8 @@
   $.get( '/freeman', function( content ){
     $('#freeman-report-wrapper').html( content );
   });
+
+  $.get( '/checkthewaves', function( content ){
+    $('#checkthewaves-report-wrapper').html( content );
+  });
 })();

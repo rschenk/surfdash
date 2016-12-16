@@ -12,6 +12,12 @@ class Browser
     open(url, 'User-Agent' => user_agent)
   end
 
+  def save(url, file)
+    File.open(file, 'wb') do |f|
+      f.write( get(url).read )
+    end
+  end
+
   private
 
   def default_user_agent

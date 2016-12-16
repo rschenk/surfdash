@@ -8,6 +8,8 @@ require './lib/cflsurf_scraper'
 require './lib/cflsurf_presenter'
 require './lib/freeman_scraper'
 require './lib/freeman_presenter'
+require './lib/checkthewaves_scraper'
+require './lib/checkthewaves_presenter'
 
 get '/' do
   erb :index
@@ -64,4 +66,8 @@ get '/freeman' do
 
   erb :freeman, locals: { freeman: FreemanPresenter.new(FreemanScraper.new) }
 
+end
+
+get '/checkthewaves' do
+  erb :checkthewaves, locals: { checkthewaves: CheckthewavesPresenter.new(CheckthewavesScraper.new) }
 end
