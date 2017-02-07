@@ -24,15 +24,20 @@ class SurflineScraper
   end
 
   def wave_description
-    @wave_description ||= doc.at_css('#observed-wave-description').text.strip
+    @wave_description ||= doc.at_css('#observed-wave-description').text.gsub(/^-/, '').strip
   end
 
   def spot_conditions
-    @spot_conditions ||= doc.at_css('#observed-spot-conditions').text.strip
+    @spot_conditions ||= doc.at_css('#observed-spot-conditions').text.strip.downcase
   end
 
   def spot_conditions_report
-    @spot_conditions_report ||= doc.at_css('#observed-spot-conditions-summary p').inner_html
+    @spot_conditions_report ||= doc.css('#observed-spot-conditions-summary p').
+      map{|p| p.inner_html.strip }.
+      reject{|p| p.empty? }.
+      reject{|p| p.start_with? "<strong>Please note</strong>" }.
+      map{|p| "<p>#{p}</p>" }.
+      join
   end
 
   private
