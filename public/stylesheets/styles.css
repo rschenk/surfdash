@@ -115,7 +115,7 @@ section.wind-alert-wrapper {
   background-color: #fd9827;
 }
 
-.updated-at {
+.updated-at, .timestamp {
   font-style: italic;
 }
 
@@ -130,6 +130,10 @@ section.wind-alert-wrapper {
 
 .ratings .rating.shortboard {
   background-position: 0 -28px;
+}
+
+.cflsurf-report-wrapper .timestamp:after {
+  content: ' -';
 }
 
 /* Weather report styling */
