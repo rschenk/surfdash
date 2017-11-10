@@ -5,6 +5,12 @@ class CflsurfPresenter < SimpleDelegator
   attr_accessor :last_viewed_at
   attr_accessor :store
 
+  def forecast
+    super.map do |forecast_line|
+      %(<p class="forecast-item"><span class="timestamp">#{format_date forecast_line.timestamp}</span> <span class="forecast">#{forecast_line.forecast}</span></p>)
+    end.join("\n")
+  end
+
   def seen_it_already?
     last_viewed_at > updated_at
   end
@@ -14,7 +20,7 @@ class CflsurfPresenter < SimpleDelegator
   end
 
   def updated_at_string
-    @updated_at_string ||= updated_at.strftime( updated_at_format )
+    @updated_at_string ||= format_date(updated_at)
   end
 
   def last_viewed_at
@@ -37,21 +43,19 @@ class CflsurfPresenter < SimpleDelegator
 
   private
 
-  def updated_at_format
-    date_format = if date_updated == Date.today
+  def format_date(date)
+    date_format = if date.to_date == Date.today
                     'Today'
                   else
                     '%A, %B %-d'
                   end
 
-    if updated_at.is_a? Date
-      date_format
-    else
-      "#{ date_format } at %-l:%M %P"
-    end
+    format_string = if date.is_a? Date
+                      date_format
+                    else
+                      "#{ date_format } at %-l:%M %P"
+                    end
+    date.strftime(format_string)
   end
 
-  def date_updated
-    @date_updated ||= Date.parse( updated_at.to_s )
-  end
 end

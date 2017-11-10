@@ -1,13 +1,14 @@
 require_relative './browser'
 require 'nokogiri'
 require 'chronic'
+require 'ostruct'
 
 class CflsurfScraper
   attr_accessor :url
   attr_accessor :doc
 
   def initialize(url=nil)
-    @url = url || 'http://cflsurf.com/aa-outlook.txt'
+    @url = url || 'http://cflsurf.com/io/'
   end
 
   def updated_at
@@ -15,29 +16,38 @@ class CflsurfScraper
   end
 
   def forecast
-    @forecast ||= doc.css('p').xpath('text()').map(&:text).join(' ').strip
+    @forecast ||= scrape_forecast_nodes
   end
 
   private
 
   def doc
-    @doc ||= load_doc
+    @doc ||= Nokogiri::HTML( Browser.new.get(url) )
   end
 
-  def load_doc
-    # Load URL
-    str = Browser.new.get(url).read
-
-    # That URL is some kinda Javascript dealy with HTML embedded in a string
-    regex = /OutlookText = "(.*?)"$/
-    html = regex.match( str.strip ){ |m| m[1].strip }
-
-    # Parse HTML fragment
-    Nokogiri::HTML::fragment(html)
+  def scrape_forecast_nodes
+    forecast_nodes.map do |node|
+      timestamp_text = node.css('b').text
+      timestamp = parse_time(timestamp_text) rescue next
+      forecast = node.inner_text.
+        sub(timestamp_text, '').
+        gsub(/^[[:space:]]+/, '').
+        gsub(/[[:space]]+$/, '')
+      OpenStruct.new(timestamp: timestamp, forecast: forecast)
+    end.compact
   end
 
   def scrape_updated_at
-    str = doc.css('b').text
+    forecast.first.timestamp
+  end
+
+  def forecast_nodes
+    @forecast_nodes ||= doc.css('#content > .wpb_row:first-of-type p')
+  end
+
+  public
+
+  def parse_time(str)
     date_regex = /^(\w+)\s+(\d+)/
     time_regex = /\(.*?(\d+:\d+ [A|P]M)\)/i
 
@@ -52,5 +62,6 @@ class CflsurfScraper
       parsed_time
     end
   end
+
 
 end
