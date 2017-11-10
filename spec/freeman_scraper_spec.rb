@@ -1,7 +1,7 @@
 require_relative './spec_helper'
 require_relative '../lib/freeman_scraper'
 
-describe FreemanScraper, vcr: { cassette_name: 'freeman_sunday' } do
+describe FreemanScraper, vcr: { cassette_name: 'freeman_scraper' } do
   subject(:scraper){ FreemanScraper.new }
 
   describe '#initialize' do
@@ -10,18 +10,18 @@ describe FreemanScraper, vcr: { cassette_name: 'freeman_sunday' } do
     end
   end
 
-  its(:updated_at){ should eq Chronic.parse('Sunday, Apr 12th at 6:30 am') }
-  its(:conditions){ should eq 'Small and Weak for DPrs' }
-  its(:conditions_report){ should eq 'Looking knee- to rare waist-high with junky, broken lines. Early Southerly winds will become southeasterly before noon' }
+  its(:updated_at){ should eq Chronic.parse('Sunday, Nov 10th at 6:30 am') }
+  its(:conditions){ should eq 'N wind early, kinda bumpy and drifty for DPrs' }
+  its(:conditions_report){ should eq 'thigh to Waist high+' }
 
-  its(:pier_conditions){ should eq 'Thigh-high with ugly crappy slop' }
-  its(:pier_conditions_report){ should eq 'should improve some thru incoming high tide' }
+  its(:pier_conditions){ should eq 'semi-clean longboard lines this morning, sum bigger sets' }
+  its(:pier_conditions_report){ should eq 'Mostly thigh-high' }
 
-  its(:pafb_conditions){ should eq 'Looking thigh-high to waist-high and a lil cleaner down this way' }
-  its(:pafb_conditions_report){ should eq 'will need to find high tide friendly sandbars by mid morning' }
+  its(:pafb_conditions){ should eq 'bumpy, kinda drifty' }
+  its(:pafb_conditions_report){ should eq 'more waist-high+ waves down this way.' }
 
   its(:pier_sb_rating){ should eq 1 }
-  its(:pier_lb_rating){ should eq 2 }
-  its(:pafb_sb_rating){ should eq 2 }
+  its(:pier_lb_rating){ should eq 3 }
+  its(:pafb_sb_rating){ should eq 4 }
   its(:pafb_lb_rating){ should eq 2 }
 end

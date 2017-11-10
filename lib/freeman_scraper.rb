@@ -63,11 +63,10 @@ class FreemanScraper
   end
 
   def load_report
-    match_data = report_td.inner_html.match(/Peek\.\.\.(.*?)Pier\.\.\./m)
-    fragment = Nokogiri::HTML::fragment( match_data[1] )
-
+    match_data = report_td.inner_html.match(/(Peek|Visual)\.\.\.(.*?)Pier\.\.\./mi)
+    fragment = Nokogiri::HTML::fragment( match_data[2] )
     @conditions = fragment.search('i').text.strip
-    @conditions_report = fragment.xpath('text()').map(&:text).join(' ').strip
+    @conditions_report = fragment.inner_text.sub(@conditions, '').strip
   end
 
   def load_pier_report
@@ -79,7 +78,7 @@ class FreemanScraper
   end
 
   def load_pafb_report
-match_data = report_td.inner_html.match(/PAFB-MelBch\.\.\.(.*?)^<br>... check/m)
+    match_data = report_td.inner_html.match(/PAFB-MelBch\.\.\.(.*?)^<br>... check/m)
     fragment = Nokogiri::HTML::fragment( match_data[1] )
 
     @pafb_conditions = fragment.search('i').text.strip
