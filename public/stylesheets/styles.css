@@ -93,25 +93,25 @@ section.wind-alert-wrapper {
   background-color: black;
 }
 
-.spot-conditions.very-poor-conditions {
+.spot-conditions.very-poor {
   background-color: #333;
 }
 
-.spot-conditions.poor-conditions {
+.spot-conditions.poor {
   background-color: steelblue;
 }
 
-.spot-conditions.poor-to-fair-conditions {
+.spot-conditions.poor-to-fair {
   background: linear-gradient(to bottom right, rgba(70,130,180,1) 50%, rgba(76,186,149,1) 51%);
 }
 
-.spot-conditions.fair-conditions,
-.spot-conditions.fair-to-good-conditions {
+.spot-conditions.fair,
+.spot-conditions.fair-to-good {
   background-color: #4CBA95;
 }
 
-.spot-conditions.good-conditions,
-.spot-conditions.very-good-conditions {
+.spot-conditions.good,
+.spot-conditions.very-good {
   background-color: #fd9827;
 }
 

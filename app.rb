@@ -2,7 +2,7 @@ require 'bundler/setup'
 require 'sinatra'
 require 'sinatra/json'
 require './lib/xtide'
-require './lib/surfline_scraper'
+require './lib/new_surfline_scraper'
 require './lib/surfline_presenter'
 require './lib/cflsurf_scraper'
 require './lib/cflsurf_presenter'
@@ -35,9 +35,9 @@ get '/surfline' do
   #   config.hook_into :webmock
   # end
   #
-  # VCR.insert_cassette('surfline_scraper')
+  # VCR.insert_cassette('new_surfline_scraper')
 
-  erb :surfline, locals: { surfline: SurflinePresenter.new(SurflineScraper.new) }
+  erb :surfline, locals: { surfline: SurflinePresenter.new(NewSurflineScraper.new) }
 end
 
 get '/cflsurf' do
