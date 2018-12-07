@@ -1,0 +1,9 @@
+<div class='county-wave-conditions'>
+  <% surfline_county.favorite_spots.each do |spot| %>
+    <div id='<%= spot.id %>' class='spot'>
+      <span class='spot-conditions <%= spot.conditions_class %>' title='<%= spot.conditions %>'></span>
+      <span class='wave-range'><%= spot.wave_range %></span>
+      <span class='spot-name'><%= spot.name %></span>
+    </div>
+  <% end %>
+</div>

@@ -8,7 +8,8 @@ class CflsurfScraper
   attr_accessor :doc
 
   def initialize(url=nil)
-    @url = url || 'http://cflsurf.com/io/'
+    @url = url || 'https://cflsurf.com/aa-outlook.txt'
+    load_page
   end
 
   def updated_at

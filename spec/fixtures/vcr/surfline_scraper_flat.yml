@@ -1,0 +1,48 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.surfline.com/surf-report/cocoa-beach-pier-florida_4421/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.75.14 (KHTML,
+        like Gecko) Version/7.0.3 Safari/7046A194A
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 301
+      message: Moved Permanently
+    headers:
+      Content-Type:
+      - text/html
+      Content-Length:
+      - '182'
+      Connection:
+      - keep-alive
+      Date:
+      - Mon, 04 Jun 2018 18:56:21 GMT
+      Server:
+      - openresty
+      Location:
+      - https://www.surfline.com/surf-report/cocoa-beach-pier/5842041f4e65fad6a7708872
+      Set-Cookie:
+      - disable_opt_out=true
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 8018acc24623a7eb3bfaed8e4f39347d.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - MkXRxjXKHcOW7GFwra10il2qbrcdRDjybCZxi56zIgfWx82RjKfahg==
+    body:
+      encoding: UTF-8
+      string: "<html>\r\n<head><title>301 Moved Permanently</title></head>\r\n<body
+        bgcolor=\"white\">\r\n<center><h1>301 Moved Permanently</h1></center>\r\n<hr><center>openresty</center>\r\n</body>\r\n</html>\r\n"
+    http_version: 
+  recorded_at: Mon, 04 Jun 2018 18:56:22 GMT
+recorded_with: VCR 2.9.3

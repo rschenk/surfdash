@@ -4,6 +4,8 @@ require 'sinatra/json'
 require './lib/xtide'
 require './lib/new_surfline_scraper'
 require './lib/surfline_presenter'
+require './lib/surfline_county_scraper'
+require './lib/surfline_county_presenter'
 require './lib/cflsurf_scraper'
 require './lib/cflsurf_presenter'
 require './lib/freeman_scraper'
@@ -28,41 +30,27 @@ get '/tide.json' do
 end
 
 get '/surfline' do
-  # require 'vcr'
-  #
-  # VCR.configure do |config|
-  #   config.cassette_library_dir = File.expand_path('../spec/fixtures/vcr', __FILE__ )
-  #   config.hook_into :webmock
-  # end
-  #
-  # VCR.insert_cassette('new_surfline_scraper')
+  # mock_request('new_surfline_scraper')
 
   erb :surfline, locals: { surfline: SurflinePresenter.new(NewSurflineScraper.new) }
 end
 
+
+get '/surfline-county' do
+  # mock_request('surfline_county_scraper')
+
+  erb :surfline_county, locals: { surfline_county: SurflineCountyPresenter.new(SurflineCountyScraper.new) }
+end
+
 get '/cflsurf' do
-  # require 'vcr'
-  #
-  # VCR.configure do |config|
-  #   config.cassette_library_dir = File.expand_path('../spec/fixtures/vcr', __FILE__ )
-  #   config.hook_into :webmock
-  # end
-  #
-  # VCR.insert_cassette('cflsurf_scraper')
+  # mock_request('cflsurf_scraper')
 
   erb :cflsurf, locals: { cflsurf: CflsurfPresenter.new(CflsurfScraper.new) }
 end
 
 
 get '/freeman' do
-  # require 'vcr'
-  #
-  # VCR.configure do |config|
-  #   config.cassette_library_dir = File.expand_path('../spec/fixtures/vcr', __FILE__ )
-  #   config.hook_into :webmock
-  # end
-  #
-  # VCR.insert_cassette('freeman_scraper')
+  # mock_request('freeman_scraper')
 
   erb :freeman, locals: { freeman: FreemanPresenter.new(FreemanScraper.new) }
 
@@ -75,4 +63,16 @@ end
 get '/weather' do
   weather = JSON.parse Browser.new.get('https://api.nextgen.guardianapps.co.uk/weatherapi/city/2230945.json?_edition=us').read
   weather['html']
+end
+
+
+def mock_request(cassette_name)
+  require 'vcr'
+
+  VCR.configure do |config|
+    config.cassette_library_dir = File.expand_path('../spec/fixtures/vcr', __FILE__ )
+    config.hook_into :webmock
+  end
+
+  VCR.insert_cassette(cassette_name)
 end

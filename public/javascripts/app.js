@@ -17,6 +17,10 @@
 
   });
 
+  $.get( '/surfline-county', function( content ){
+    $('#surfline-county-report-wrapper').html( content );
+  });
+
   $.get( '/weather', function( content ){
     $('#weather-report-wrapper').html( content );
   });

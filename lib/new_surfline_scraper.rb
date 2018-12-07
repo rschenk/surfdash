@@ -33,7 +33,7 @@ class NewSurflineScraper
 
   def wave_range
     @wave_range ||= doc
-      .at_css('.sl-spot-forecast-summary__wrapper .quiver-surf-height')
+      .at_css('.sl-spot-forecast-summary__wrapper .sl-spot-forecast-summary__stat:first-of-type .quiver-surf-height')
       .text
       .strip
       .gsub(/(?<!\s)FT/, ' ft')
@@ -41,7 +41,7 @@ class NewSurflineScraper
 
   def wave_description
     @wave_description ||= doc
-    .at_css('.sl-spot-forecast-summary__wrapper .sl-reading-description[data-reactid="1029"]')
+    .at_css('.sl-spot-forecast-summary__wrapper .sl-spot-forecast-summary__stat:first-of-type .sl-reading-description')
     .text
     .strip
   end
