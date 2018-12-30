@@ -31,11 +31,11 @@ class FreemanScraper
   end
 
   def pafb_sb_rating
-    @pafb_sb_rating ||= report_td.text.match(/^PAFB-MelBch\s+SB rating.*?(\d+)/)[1].to_i
+    @pafb_sb_rating ||= report_td.text.match(/^PAFB-\w{3}Bch\s+SB rating.*?(\d+)/)[1].to_i
   end
 
   def pafb_lb_rating
-    @pafb_lb_rating ||= report_td.text.match(/^PAFB-MelBch\s+LB rating.*?(\d+)/)[1].to_i
+    @pafb_lb_rating ||= report_td.text.match(/^PAFB-\w{3}Bch\s+LB rating.*?(\d+)/)[1].to_i
   end
 
   private
@@ -78,7 +78,7 @@ class FreemanScraper
   end
 
   def load_pafb_report
-    match_data = report_td.inner_html.match(/PAFB-MelBch\.\.\.(.*?)^<br>... check/m)
+    match_data = report_td.inner_html.match(/PAFB-\w{3}Bch\.\.\.(.*?)^<br>... check/m)
     fragment = Nokogiri::HTML::fragment( match_data[1] )
 
     @pafb_conditions = fragment.search('i').text.strip

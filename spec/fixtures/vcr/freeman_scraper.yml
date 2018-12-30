@@ -20,15 +20,15 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 10 Nov 2017 15:13:44 GMT
+      - Sun, 30 Dec 2018 17:13:42 GMT
       Last-Modified:
-      - Fri, 10 Nov 2017 11:21:28 GMT
+      - Sun, 30 Dec 2018 12:04:19 GMT
       Content-Length:
-      - '13615'
+      - '14338'
       Content-Type:
       - text/html
       Set-Cookie:
-      - TS0194eee0=01d6b5650ce98a9a504067550643479cb73e663cb19c1bf036d5587d32ea90b12c593a433f9819cd00a0a0a9027a0ef2aa9eb8123f;
+      - TS0194eee0=01d6b5650cff4cfdb0453bc3745b27e6491e7d8d9b0d0a9c55fcfd1a3db8fc95210133704abc0b6d2bb59c1d30d19f90a7e92df156;
         Path=/
     body:
       encoding: UTF-8
@@ -58,74 +58,80 @@ http_interactions:
         BGCOLOR=\"#000000\"  TEXT=\"#33ffff\" LINK=\"#00ccff\" ALINK=\"#00ccff\" VLINK=\"#00ccff\"
         bgproperties=\"fixed\" RESIZE>\r\n\r\n<STYLE>\r\nA {text-decoration:none;}\r\nA:hover
         {color:#0000ff;}\r\n</STYLE>\r\n\r\n\r\n<br>\r\n\r\n<html>\r\n<p align=middle>\r\n<table
-        width=100%>\r\n <tr>\r\n <td>\r\n\r\n\r\n\r\n\r\n  <td align=middle>\r\n    <img
-        src=\"bf-b-s.jpg\" width=\"150\">\r\n   </td>\r\n\r\n\r\n<!--\r\n  <td align=middle>\r\n
-        \   <a href=\"11924.jpg\"><img src=\"11924s.jpg\" width=\"190\">\r\n<br><i>click
-        for better view</i>\r\n<br>\r\nMy Step-Up models<br>\r\n6'8 to 7'8<br>\r\nrestocked
-        in RonJons</a>\r\n   </td>\r\n-->\r\n\r\n\r\n  <td>\r\n   <table>\r\n    <tr>\r\n
+        width=100%>\r\n <tr>\r\n <td>\r\n\r\n\r\n\r\n\r\n<!--\r\n  <td align=middle>\r\n
+        \   <img src=\"rj-picb.png\" width=\"150\">\r\n   </td>\r\n-->\r\n\r\n<!--\r\n
+        \ <td align=middle>\r\n    <img src=\"bf-b-s.jpg\" width=\"140\">\r\n   </td>\r\n-->\r\n\r\n\r\n
+        \ <td align=middle>\r\n    <img src=\"bf-2l.jpg\" width=170 Alt=\"16th Street\"><br>Longboardable
+        today ???\r\n   </td>\r\n\r\n\r\n\r\n  <td>\r\n   <table>\r\n    <tr>\r\n
         \    <td>\r\n    <font face=Arial size=4><b><i>Bob Freeman's Cocoa Beach Surf
         Report</i></b> &nbsp;&nbsp;&nbsp;\r\n     </td> \r\n<td width=300>\r\n</td>\r\n
         \    <td>\r\n\r\n\r\n <a href=\"http://www.floridabeachhomesandcondos.com\">My
         son, Bobby ... da Realtor &nbsp; <img src=\"bobbyad.jpg\" width=182 ALT=\"My
         son, Bobby ... da Realtor\"></a>\r\n     </td>\r\n    </tr>\r\n   </table>
         \ \r\n&nbsp;&nbsp;&nbsp;&nbsp;<font size=1 face=Arial>SURF STORYS@<a href=\"http://www.bobfreemansurf.com\">BobFreemanSurf.com</a>
-        </font><br>\r\n<font face=Arial size=4 color=\"#00ffff\"><b><i>6:00am Dawn
+        </font><br>\r\n<font face=Arial size=4 color=\"#00ffff\"><b><i>6:45am Dawn
         Patrol Eye Ball Visual and Detailed Analysis</i></b></font> &nbsp; &nbsp;
         &nbsp; &nbsp; <br>\r\n<font size=2>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
         ... <b><i>for Fridays, Saturdays and Sundays</i></b> </font> \r\n<br><br>\r\n\r\n<!--\r\n<br>\r\n<marquee
-        width=550 behavior=slide><font face=Arial size=4 color=green> &nbsp; <b><i>NW
-        semi-offshores again this morning</font></i></b></marquee>\r\n<br>\r\n-->\r\n\r\n<!--\r\n<br>\r\n<font
+        width=650 behavior=slide><font face=Arial size=4 color=yellow> &nbsp; <b><i>very
+        small N Cocoa Beach, much bigger southward</font></i></b></marquee>\r\n<br>\r\n-->\r\n\r\n\r\n<!--\r\n<br>\r\n<font
         size=4 color=white>No Malware found on this site ... scanned 1/15/17</font>\r\n<br>\r\n<font
         size=2>If malware suspected... eMail Bob: <a href=\"http://www.bobfreemansurf.com/email-1.html\">
         <u>here</u></a><br></font>\r\n<br>\r\n-->\r\n\r\n<br><br>\r\n\r\n\r\n\r\n<br>\r\n\r\n
         \ </td>\r\n </tr>\r\n</table>\r\n\r\n<br>\r\n\r\n<table width=100% bgcolor=black>\r\n
         <tr>\r\n  <td width=285 valign=top bgcolor=black border=2>\r\n\r\n<font face=Arial
-        size=2>\r\n\r\n<!--friday-->\r\n\r\n<a href = \"http://www.gosurfsportswear.com/piercam/fri.png\"
-        onmouseover = \"doButtons('fri')\"><b>Fri 11/10</b> | &nbsp; &nbsp; &nbsp;\r\n<a
-        href = \"http://www.gosurfsportswear.com/piercam/sat.png\" onmouseover = \"doButtons('sat')\">Sat
-        11/11 | &nbsp;\r\n<a href = \"http://www.gosurfsportswear.com/piercam/sun.png\"
-        onmouseover = \"doButtons('sun')\">Sun 11/12\r\n\r\n\r\n<!--saturday-->\r\n<!--\r\n<a
+        size=2>\r\n\r\n<!--friday-->\r\n<!--\r\n<a href = \"http://www.gosurfsportswear.com/piercam/fri.png\"
+        onmouseover = \"doButtons('fri')\"><b>Fri 12/28</b> &nbsp;|&nbsp;\r\n<a href
+        = \"http://www.gosurfsportswear.com/piercam/sat.png\" onmouseover = \"doButtons('sat')\">Sat
+        12/29 |&nbsp;\r\n<a href = \"http://www.gosurfsportswear.com/piercam/sun.png\"
+        onmouseover = \"doButtons('sun')\">Sun 12/30\r\n-->\r\n\r\n\r\n<!--saturday-->\r\n<!--\r\n<a
         href = \"http://www.gosurfsportswear.com/piercam/sat.png\" onmouseover = \"doButtons('sat')\"><b>Sat
-        11/4</b> | &nbsp;\r\n<a href = \"http://www.gosurfsportswear.com/piercam/sun.png\"
-        onmouseover = \"doButtons('sun')\">Sun 11/5 &nbsp; |&nbsp; &nbsp; &nbsp;\r\n<a
-        href = \"http://www.gosurfsportswear.com/piercam/fri.png\" onmouseover = \"doButtons('fri')\">Nxt
-        Fri 11/10\r\n-->\r\n\r\n<!--sunday-->\r\n<!--\r\n<a href = \"http://www.gosurfsportswear.com/piercam/sun.png\"
-        onmouseover = \"doButtons('sun')\"><b>Sun 11/5</b> | &nbsp; &nbsp; &nbsp;\r\n<a
-        href = \"http://www.gosurfsportswear.com/piercam/fri.png\" onmouseover = \"doButtons('fri')\">&nbsp;
-        Nxt Fri 11/10 | &nbsp;\r\n<a href = \"http://www.gosurfsportswear.com/piercam/sat.png\"
-        onmouseover = \"doButtons('sat')\"> Sat 11/11\r\n-->\r\n\r\n    <img name=picture
-        src=\"fri.png\" border=0>\r\n  </td> \r\n\r\n  <td align=left valign=top color=black>\r\n\r\n
-        \   <table>\r\n     <tr>\r\n      <td align=\"right\" valign=\"top\" width=\"50\"
-        bgcolor=black>\r\n<font color=\"#00bbff\" SIZE=\"2\" face=\"Arial\">\r\nDate:<BR>\r\nTides:<BR>\r\nWater:<BR>\r\nWinds:<BR>\r\nBuoys:<BR><br><br><br><br><br><br>\r\nReport:<BR><BR>\r\n
+        12/29</b> | &nbsp; &nbsp;\r\n<a href = \"http://www.gosurfsportswear.com/piercam/sun.png\"
+        onmouseover = \"doButtons('sun')\">Sun 12/30 &nbsp; | \r\n<a href = \"http://www.gosurfsportswear.com/piercam/fri.png\"
+        onmouseover = \"doButtons('fri')\">Nxt Fri 1/4\r\n-->\r\n\r\n<!--sunday-->\r\n\r\n<a
+        href = \"http://www.gosurfsportswear.com/piercam/sun.png\" onmouseover = \"doButtons('sun')\"><b>Sun
+        12/30</b> | &nbsp; | &nbsp;\r\n<a href = \"http://www.gosurfsportswear.com/piercam/fri.png\"
+        onmouseover = \"doButtons('fri')\">&nbsp; Fri 1/4 | &nbsp;\r\n<a href = \"http://www.gosurfsportswear.com/piercam/sat.png\"
+        onmouseover = \"doButtons('sat')\"> Sat 1/5\r\n\r\n\r\n\r\n<!--monday-->\r\n<!--\r\n<a
+        href = \"http://www.gosurfsportswear.com/piercam/mon.png\" onmouseover = \"doButtons('mon')\"><b>Mon
+        9/3</b> | &nbsp;\r\n<a href = \"http://www.gosurfsportswear.com/piercam/fri.png\"
+        onmouseover = \"doButtons('fri')\">&nbsp; Nxt Fri 9/7 | &nbsp;\r\n<a href
+        = \"http://www.gosurfsportswear.com/piercam/sat.png\" onmouseover = \"doButtons('sat')\">
+        Sat 9/8 | &nbsp;\r\n<a href = \"http://www.gosurfsportswear.com/piercam/sun.png\"
+        onmouseover = \"doButtons('sun')\"><b>Sun 9/9</b>\r\n-->\r\n\r\n    <img name=picture
+        src=\"sun.png\" border=0>\r\n  </td> \r\n\r\n\r\n  <td align=left valign=top
+        color=black>\r\n\r\n    <table>\r\n     <tr>\r\n      <td align=\"right\"
+        valign=\"top\" width=\"50\" bgcolor=black>\r\n<font color=\"#00bbff\" SIZE=\"2\"
+        face=\"Arial\">\r\nDate:<BR>\r\nTides:<BR>\r\nWater:<BR>\r\nWinds:<BR>\r\nBuoys:<BR><br><br><br><br><br><br>\r\nReport:<BR><BR>\r\n
         \     </td>\r\n      <td align=\"left\" valign=\"top\" width=\"400\" background=\"tl13.jpg\"
-        bordercolor=black><FONT COLOR=\"#00ffff\" FACE=Arial SIZE=\"2\">\r\n<B>Friday,
-        Nov 10th</B><br>\r\n<font color=\"#00bbaa\">L</font> &nbsp;<b>6:20am</b> &nbsp;
-        &nbsp;\r\n<font color=\"#00bbaa\">H</font> &nbsp;<b>12:45pm</b><br>\r\n<b>77&#176</b>
-        &nbsp; &nbsp; &nbsp; <b><font color=\"#00bbaa\">Rubber:</b></font> <b>am vest?</b><br>\r\n<font
-        color=\"#00bbff\">@ 6:00am:</font> <b>NNW 10</b> &nbsp;&nbsp;<font color=\"#00bbff\">Later:
-        </font><b>N 15-20</b><BR>\r\n<font color=\"#00bbaa\">Canaveral 2 mile (41113)
-        </font>&nbsp;\r\n<br>&nbsp; groundswell...  <b>ENE &nbsp; 0.7ft 10.5sec</b>\r\n<br>&nbsp;
-        windswell... <b>E &nbsp; 2.3ft 9.9sec</b><br>\r\n<font color=\"#00bbaa\">Ft
-        Pierce 4 mile (41114) </font>&nbsp;  \r\n<br>&nbsp; groundswell... <b>ENE
-        &nbsp; 0.7ft 11.1sec</b>\r\n<br>&nbsp; windswell... <b>NE &nbsp; 3.6ft 7.1sec</b><BR>\r\n<b><font
-        color=\"#00bbaa\">\r\n<br>\r\n6:00am VISUAL...</font></b><b>thigh to Waist
-        high+</B><BR>\r\n<i>N wind early, kinda bumpy and drifty for DPrs</i><br>\r\n\r\n\r\n<br>\r\n<b><i><font
-        size=5 color=\"#00bbaa\">Pier...</i></b></font>\r\n<font size=2>Mostly thigh-high<br>\r\n<i>semi-clean
-        longboard lines this morning, sum bigger sets</i>\r\n\r\n\r\n</font>\r\n&nbsp;
-        &nbsp; <br></font><br>\r\n\r\n<b><i><font size=5 color=\"#00bbaa\">PAFB-MelBch...</i></b></font>\r\n<font
-        face=Arial size=2>more waist-high+ waves down this way.\r\n<br>\r\n<i>bumpy,
-        kinda drifty</i>\r\n<br>\r\n\r\n<br>... check <i><b><u><a href=\"http://www.thewavecaster.com\">The
-        Wavecaster's</u></b></i></a> report for the latest info.\r\n\r\n</font>\r\n&nbsp;
-        &nbsp; \r\n<br><br>\r\nBob's Ratings for this morning <b><i>(DP only)...</i></b>\r\n<br><font
-        color=\"#00bbff\">CB Pier</font> <font color=\"#00bbaa\">SB rating...<font
-        color=\"#00ffff\"> <b>1</b> &nbsp; of 10 <i></i>\r\n<br><font color=\"#00bbff\">CB
-        Pier</font> <font color=\"#00bbaa\"> LB rating...<font color=\"#00ffff\">
-        <b>3</b> &nbsp; of 10  <i></i>\r\n<br><font color=\"#00bbff\">PAFB-MelBch</font>
-        <font color=\"#00bbaa\"> SB rating...<font color=\"#00ffff\"> <b>4</b> &nbsp;
-        of 10 <i></i>\r\n<br><font color=\"#00bbff\">PAFB-MelBch</font> <font color=\"#00bbaa\">
-        LB rating...<font color=\"#00ffff\"> <b>2</b> &nbsp; of 10 <i></i>\r\n\r\n\r\n<font
-        color=white><br>\r\n<br><font color=\"#00bbff\"><b>Forecast ... </b>\r\n<font
-        color=\"#00ffff\">very windy by mid-morning &nbsp; &nbsp; <font size=1 color=\"#00bbff\"><i>Freeman</i></font>\r\n<br><br>\r\n\r\n\r\n<br>\r\n<font
+        bordercolor=black><FONT COLOR=\"#00ffff\" FACE=Arial SIZE=\"2\">\r\n<B>Sunday,
+        Dec 30th</B><br>\r\n<font color=\"#00bbaa\">L</font> &nbsp;<b>8:00am</b> &nbsp;
+        &nbsp;\r\n<font color=\"#00bbaa\">H</font> &nbsp;<b>2:00pm</b><br>\r\n<b>71&#176</b>
+        &nbsp; &nbsp; &nbsp; <b><font color=\"#00bbaa\">Rubber:</b></font> <b>Vest
+        or Spring</b><br>\r\n<font color=\"#00bbff\">@ 6:45am:</font> <b>SW 8</b>
+        &nbsp;&nbsp;<font color=\"#00bbff\">Later: </font><b>S 10+</b><BR>\r\n<font
+        color=\"#00bbaa\">Canaveral 2 mile (41113) </font>&nbsp;\r\n<br>&nbsp; groundswell...
+        \ <b>ESE &nbsp; 0.7ft 10.5sec</b>\r\n<br>&nbsp; windswell... <b>ESE &nbsp;
+        2.0ft 9.1sec</b><br>\r\n<font color=\"#00bbaa\">Ft Pierce 4 mile (41114) </font>&nbsp;
+        \ \r\n<br>&nbsp; groundswell... <b>E &nbsp; 0.7ft 10.5sec</b>\r\n<br>&nbsp;
+        windswell... <b>ENE &nbsp; 2.3ft 8.3sec</b><BR>\r\n<b><font color=yellow>\r\n<br>\r\n6:45am
+        \ VISUAL...</font></b><b>thigh to Waist high clean lines</B>\r\n<br><i>early
+        southwesterly breeze</i>\r\n<br>\r\n\r\n\r\n<br>\r\n<b><i><font size=5 color=\"#00bbaa\">Pier...</i></b></font>\r\n<font
+        size=2>Mostly Thigh high, sum bigger<br>\r\n<i>small but clean longboard lines</i>\r\n\r\n\r\n</font>\r\n&nbsp;
+        &nbsp; <br></font><br>\r\n\r\n<b><i><font size=5 color=\"#00bbaa\">PAFB-SatBch...</i></b></font>\r\n<font
+        face=Arial size=2>mostly waist high\r\n<br>\r\n<i>clean lines</i>\r\n<br>\r\n\r\n<br>...
+        check <i><b><u><a href=\"http://www.thewavecaster.com\">The Wavecaster's</u></b></i></a>
+        report for the latest info.\r\n\r\n</font>\r\n&nbsp; &nbsp; \r\n<br><br>\r\nBob's
+        Ratings for this morning <b><i>(DP only)...</i></b>\r\n<br><font color=\"#00bbff\">CB
+        Pier</font> <font color=\"#00bbaa\">SB rating...<font color=\"#00ffff\"> <b>1</b>
+        &nbsp; of 10 <i></i>\r\n<br><font color=\"#00bbff\">CB Pier</font> <font color=\"#00bbaa\">
+        LB rating...<font color=\"#00ffff\"> <b>5</b> &nbsp; of 10  <i></i>\r\n<br><font
+        color=\"#00bbff\">PAFB-SatBch</font> <font color=\"#00bbaa\"> SB rating...<font
+        color=\"#00ffff\"> <b>3</b> &nbsp; of 10 <i></i>\r\n<br><font color=\"#00bbff\">PAFB-SatBch</font>
+        <font color=\"#00bbaa\"> LB rating...<font color=\"#00ffff\"> <b>5</b> &nbsp;
+        of 10 <i></i>\r\n\r\n\r\n<font color=white><br>\r\n<br><font color=\"#00bbff\"><b>Forecast
+        ... </b>lil smaller and better winds for NewYears\r\n<font color=\"#00ffff\">
+        &nbsp; &nbsp; <font size=1 color=\"#00bbff\"><i>Freeman</i></font>\r\n<br><br>\r\n\r\n\r\n<br>\r\n<font
         size=1>(click pics for larger images)</font>\r\n  </td>\r\n  <td>\r\n\r\n\r\n\r\n<font
         size=2 color=#00bbff><b>Live from Cocoa Beach Pier... &nbsp; &nbsp;</b> Surfline
         partner since 1999\r\n<br>\r\n<br>\r\n\r\n<!--\r\n<font size=3 color=white>DP
@@ -138,18 +144,20 @@ http_interactions:
         Cocoa Beach, Florida Surf Cam -->\r\n\r\n\r\n\r\n\r\n\r\n\r\n  </td>\r\n </tr>\r\n</table>\r\n\r\n<table>\r\n
         \ <tr>\r\n    <td valign=top>\r\n      <table>\r\n          <tr>\r\n           <td
         valign=top>\r\n<a href=\"http://radar.weather.gov/ridge/radar_lite.php?rid=MLB&product=N0R&loop=yes\"><img
-        src=\"http://radar.weather.gov/ridge/lite/N0R/MLB_loop.gif\" width=160></a>\r\n
-        \          </td>\r\n\r\n<!--\r\n  <td valign=top>\r\n<a href=\"http://icons.wunderground.com/data/456x343/2xat_ir_anim.gif?2006821409\"><img
+        src=\"http://radar.weather.gov/ridge/lite/N0R/MLB_loop.gif\" width=160></a>\r\n<br>local
+        radar\r\n           </td>\r\n\r\n           <td align=middle>\r\n<a href=\"https://marine.rutgers.edu/cool/sat_data/?product=sst&region=floridacoast&nothumbs=0\"><img
+        src=\"http://www.gosurfsportswear.com/piercam/temp.jpg\" width=\"160\"></a>\r\n<br>Water
+        temps\r\n           </td>\r\n\r\n\r\n\r\n<!--\r\n  <td valign=top>\r\n<a href=\"http://icons.wunderground.com/data/456x343/2xat_ir_anim.gif?2006821409\"><img
         src=\"http://icons.wunderground.com/data/456x343/2xat_ir_anim.gif?2006821409\"
-        width=200></a>\r\n   </td>\r\n-->\r\n   <td>\r\n<font face=Arial size=2 color=black>\r\n<form
-        name=\"form\">\r\n          <select name=\"site\" size=11>\r\n          <option
-        value=\"http://www.ndbc.noaa.gov/station_page.php?station=41113\">2 mile buoy\r\n
-        \         <option value=\"http://www.ndbc.noaa.gov/station_page.php?station=41009\">20
+        width=200></a>\r\n   </td>\r\n-->\r\n   <td align=top>\r\n<font face=Arial
+        size=2 color=black>\r\n<form name=\"form\">\r\n          <select name=\"site\"
+        size=12>\r\n          <option value=\"http://www.ndbc.noaa.gov/station_page.php?station=41113\">2
+        mile buoy\r\n          <option value=\"http://www.ndbc.noaa.gov/station_page.php?station=41009\">20
         mile buoy\r\n          <option value=\"http://www.ndbc.noaa.gov/station_page.php?station=41114\">Ft
         Pierce buoy\r\n          <option value=\"http://www.ndbc.noaa.gov/data/Forecasts/FZUS52.KMLB.html\">Buoy
         Forecast\r\n          <option value='http://forecast.weather.gov/MapClick.php?lat=28.332541918076117&lon=-80.61067664051376&site=all&smap=1#.UzaV8WdOUdV'>Wind/AirTemp\r\n
         \         <option value=\"http://www.weather.com/weather/hourbyhour/graph/Cocoa+Beach+FL+USFL0089:1:US\">Winds
-        Forecast\r\n          <option value=\"http://www.tropicalweather.net/Florida_water_temps.htm\">Water
+        Forecast\r\n          <option value=\"https://marine.rutgers.edu/cool/sat_data/?nothumbs=0&product=sst&region=floridacoast\">Water
         Temps\r\n          <option value=\"http://iwave.rsmas.miami.edu/surf/nww.html#\">NOAA
         Animation\r\n          <option value=\"http://www.stormsurfing.com/cgi/display.cgi?a=natla_height\">StormSurf\r\n
         \         <option value=\"http://www.thewavecaster.com\">WaveCaster\r\n          <option
@@ -165,11 +173,10 @@ http_interactions:
         \         <option value=\"http://www.brevardrealtyconnection.com\">Brevard
         MLS Search \r\n         </select>\r\n          <input type=button value=\"Go!\"
         onClick=\"javascript:formHandler(this)\">\r\n          </form>\r\n          </center>\r\n\r\n
-        \ </td>\r\n\r\n\r\n<!--\r\n     \t<td width=\"140\" align=center><a href=\"https://www.wunderground.com/hurricane/atlantic/2017/tropical-depression-sixteen\">\r\n
-        \          <IMG SRC=\"https://icons.wunderground.com/data/images/at201718_model.gif\"
-        width=\"160\" height=\"105\">\r\n          TS Nate forecast</a>\r\n\t</td>\r\n\r\n
-        \       <td width=\"150\" align=center><a href=\"http://www.stormsurfing.com/cgi/display.cgi?a=natla_height\"><IMG
-        SRC=\"new-n.jpg\" width=\"170\" height=\"105\">\r\n         Nxt Week ???</a>\r\n\t</td>\r\n\r\n
+        \ </td>\r\n\r\n<!--\r\n     \t<td width=\"140\" align=center><a href=\"https://www.wunderground.com/hurricane/atlantic/2018/Hurricane-Florence?map=forecast\">\r\n
+        \          <IMG SRC=\"td6.jpg\" width=\"160\" height=\"105\">\r\n          Florence
+        forecast</a>\r\n\t</td>\r\n\r\n        <td width=\"150\" align=center><a href=\"http://www.stormsurfing.com/cgi/display.cgi?a=natla_height\"><IMG
+        SRC=\"new-n.jpg\" width=\"170\" height=\"105\">\r\n         Florence Thu 9/13</a>\r\n\t</td>\r\n\r\n
         \       <td width=\"150\" align=center><a href=\"https://www.wunderground.com/hurricane/atlantic/2017/hurricane-jose\">\r\n
         \         <IMG SRC=\"https://icons.wunderground.com/data/images/at201712_model.gif\"
         width=\"150\" height=\"105\">\r\n          Jose - forecast</a>\r\n\t</td>\r\n-->\r\n\r\n\r\n\r\n
@@ -180,9 +187,9 @@ http_interactions:
         Many parks and Streets in Cocoa Beach and Cape Canaveral offer soft, fun waves
         ideal for learning and safety.<br>Novices should avoid the crowds and harder
         breaking waves at popularized spots such as 2nd Light, RCs and Sebastian Inlet.
-        \r\n</b>\r\n\r\n<P align=center>\r\n<br><br>\r\n<br><br>\r\n<!-- ---- Quick-counter.net
-        ---- -->\r\n<a href=\"http://www.quick-counter.net/\" title=\"HTML hit counter
-        - Quick-counter.net\"><img src=\"http://www.quick-counter.net/aip.php?tp=di&tz=US%2FEastern\"
+        \r\n</b>\r\n\r\n<P align=center>\r\n<br><br>\r\n<br><br>\r\n<font color=white>\r\n<!--
+        ---- Quick-counter.net ---- -->\r\n<a href=\"http://www.quick-counter.net/\"
+        title=\"HTML hit counter - Quick-counter.net\"><img src=\"http://www.quick-counter.net/aip.php?tp=di&tz=US%2FEastern\"
         alt=\"HTML hit counter - Quick-counter.net\" border=\"0\" /></a>\r\n<!-- ----
         Quick-counter.net ---- -->\r\n\r\n<!-- WiredMinds eMetrics tracking with Enterprise
         Edition V5.4 START -->\n<script type='text/javascript' src='https://count.carrierzone.com/app/count_server/count.js'></script>\n<script
@@ -190,5 +197,5 @@ http_interactions:
         -->\n</script>\n<!-- WiredMinds eMetrics tracking with Enterprise Edition
         V5.4 END -->\n</body>\r\n</html>\r\n\r\n\r\n"
     http_version: 
-  recorded_at: Fri, 10 Nov 2017 15:13:44 GMT
+  recorded_at: Sun, 30 Dec 2018 17:13:42 GMT
 recorded_with: VCR 2.9.3
