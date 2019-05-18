@@ -18,12 +18,13 @@ class SurflineCountyScraper
   private
 
   def scrape_spots
-    doc.css('.sl-spot-list__spots .sl-spot-list-item__container')
-    .map { |spot| scrape_spot spot }
+    doc.css('.sl-spot-list__spots .quiver-spot-list-item__container')
+      .map { |spot| scrape_spot spot }
+      .uniq { |spot| spot.name }
   end
 
   def scrape_spot(el)
-    name = el.css('.sl-spot-details__name').text.strip
+    name = el.css('.quiver-spot-details__name').text.strip
     conditions = el.css('.quiver-surf-conditions').first.text.strip.downcase
     wave_range = el.css('.quiver-surf-height')
       .text

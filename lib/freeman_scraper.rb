@@ -13,7 +13,7 @@ class FreemanScraper
   attr_reader :pafb_conditions_report
 
   def initialize(url=nil)
-    @url = url || 'http://www.gosurfsportswear.com/piercam/pier.html'
+    @url = url || 'http://bobfreemansurf.com/piercam/pier.html'
 
     load_page
   end

@@ -51,12 +51,18 @@ class NewSurflineScraper
   end
 
   def spot_conditions_report
-    @spot_conditions_report ||= doc.css('.sl-spot-report__report-text p').
+    return @spot_conditions_report if @spot_conditions_report
+
+    paragraphs = doc.css('.sl-spot-report__report-text p').lazy.
       reject{|p| p.text.strip.empty? }.
       reject{|p| p.text.match /Check out\s+Premium Analysis\s+for more details/i }.
+      take_while{|p| !p.text.match /Forecast Headlines/i }.
       map{|p| p.inner_html.strip }.
       map{|p| "<p>#{p}</p>" }.
+      to_a.
       join
+
+    @spot_conditions_report = paragraphs
   end
 
   private
