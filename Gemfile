@@ -3,6 +3,9 @@ source 'http://rubygems.org/'
 # Tiny web framework
 gem 'sinatra'
 
+# Web server
+gem 'puma'
+
 # Extra stuffs
 gem 'sinatra-contrib'
 
