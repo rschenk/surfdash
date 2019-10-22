@@ -26,22 +26,21 @@ class Xtide
   end
 
   def execute( options='' )
-    `cd #{path}; ./tide #{default_arguments} #{options}`
+    `HFILE_PATH=#{hfile_path} #{path}/tide #{default_arguments} #{options}`
   end
 
   private
 
   def load_events
-    [].tap do |events|
+    output = execute "-m p -b '#{stftime(start_t)}' -e '#{stftime(end_t)}'"
 
-      output = execute '-m p'
+    [].tap do |events|
       CSV.parse( output ) do |location, date, time, height, event_type|
 
         timestamp = Time.parse( "#{date} #{time}" )
 
-        # Constrain data to only within our start and end times
-        next  if timestamp < start_t
-        break if timestamp > end_t
+        # Only interested in high and low tide events, not sun/moon
+        next unless event_type.match(/tide/i)
 
         events << [
           timestamp,
@@ -54,20 +53,18 @@ class Xtide
   end
 
   def load_graph_data
-    interval = '00:30' # HH:MM
-    output = execute %( -m r -s "#{interval}" )
+    time_padding = 60*60 # one hour padding on times to ensure smooth graph ends
+    graph_start = start_t - time_padding
+    graph_end   = end_t   + time_padding
 
-    padding = 60*60 # one hour
+    interval = '00:30' # HH:MM
+
+    output = execute "-m r -s '#{interval}' -b '#{stftime(graph_start)}' -e '#{stftime(graph_end)}'"
 
     [].tap do |graph_data|
       CSV.parse( output ) do |location, epoch, height|
 
         timestamp = Time.at( epoch.to_i )
-
-        # Constrain data to only within our start and end times
-        # plus a little extra to make sure the graph is smooth on the ends
-        next  if timestamp < ( start_t - padding )
-        break if timestamp > ( end_t   + padding )
 
         graph_data << [
           timestamp,
@@ -78,9 +75,12 @@ class Xtide
   end
 
   def load_now
-    output = execute '-m n'
+    now = Time.now
+    next_minute = now + 60
+    output = execute "-m r -b '#{stftime(now)}' -e '#{stftime(next_minute)}'"
+    first_line, *_ = output.split("\n")
 
-    _, epoch, height = output.strip.split(',')
+    _location, epoch, height = first_line.strip.split(',')
 
     [ Time.at( epoch.to_i ), height.to_f ]
   end
@@ -96,4 +96,11 @@ class Xtide
     @path ||= File.expand_path("../../bin", __FILE__)
   end
 
+  def hfile_path
+    path + '/localTCD/harmonics-dwf-20190620-free.tcd'
+  end
+
+  def stftime(time)
+    time.strftime('%Y-%m-%d %H:%M')
+  end
 end

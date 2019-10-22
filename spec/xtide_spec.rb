@@ -23,13 +23,14 @@ describe Xtide do
 
     it 'returns a tuple of timestamp and current tide level' do
       expect( now ).to be_a Array
-      expect( now[0] ).to be_within( 1 ).of( Time.now )
+      expect( now[0] ).to be_within( 60 ).of( Time.now )
       expect( now[1] ).to be_a Float
     end
   end
 
   describe '#events' do
     it 'returns high and low tide events between start and end times' do
+      expect(xtide.events).not_to be_empty
 
       xtide.events.each do |event|
         expect( event[0] ).to be_between( midnight_this_morning, midnight_tonight )
