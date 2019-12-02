@@ -4,7 +4,7 @@ require_relative '../lib/new_surfline_scraper'
 describe NewSurflineScraper, vcr: { cassette_name: 'new_surfline_scraper' } do
   subject(:scraper){ NewSurflineScraper.new }
 
-  before { Timecop.freeze(Time.local(2019, 1, 15, 14, 23)) }
+  before { Timecop.freeze(Time.local(2019, 11, 24, 15, 56)) }
   after { Timecop.return }
 
   describe '#initialize' do
@@ -13,7 +13,7 @@ describe NewSurflineScraper, vcr: { cassette_name: 'new_surfline_scraper' } do
     end
   end
 
-  its(:updated_at){ should eq Chronic.parse('January 15, 2019 at 12:35pm') }
+  its(:updated_at){ should eq Chronic.parse('November 24, 2019 at 1:09 pm') }
   its(:wave_range){ should eq '1-2 ft' }
   its(:wave_description){ should eq 'Ankle to knee high' }
   its(:spot_conditions){ should eq 'poor' }

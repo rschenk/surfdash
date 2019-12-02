@@ -13,7 +13,7 @@ class NewSurflineScraper
     return @updated_at unless @updated_at.nil?
 
     updated_at_text = doc.
-      at_css('.sl-forecaster-profile__update-container__last-update').
+      at_css('.quiver-forecaster-profile__update-container__last-update').
       children.
       select { |child| child.text? }.
       map(&:text).
