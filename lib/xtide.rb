@@ -26,7 +26,7 @@ class Xtide
   end
 
   def execute( options='' )
-    `HFILE_PATH=#{hfile_path} #{path}/tide #{default_arguments} #{options}`
+    `HFILE_PATH=#{hfile_path} DYLD_LIBRARY_PATH=#{dylid_library_path} #{path}/tide #{default_arguments} #{options}`
   end
 
   private
@@ -98,6 +98,10 @@ class Xtide
 
   def hfile_path
     path + '/localTCD/harmonics-dwf-20190620-free.tcd'
+  end
+
+  def dylid_library_path
+    path + '/.bin'
   end
 
   def stftime(time)
