@@ -25,6 +25,16 @@
     $('#weather-report-wrapper').html( content );
   });
 
+  $.get( '/buoy_41113', function( content ){
+    $('#buoy-41113-report-wrapper').html( content );
+    initializeBuoy('buoy_41113')
+  });
+
+  $.get( '/buoy_41009', function( content ){
+    $('#buoy-41009-report-wrapper').html( content );
+    initializeBuoy('buoy_41009')
+  });
+
   $.get( '/cflsurf', function( content ){
     $('#cflsurf-report-wrapper').html( content );
   });
@@ -37,3 +47,15 @@
     $('#checkthewaves-report-wrapper').html( content );
   });
 })();
+
+function initializeBuoy(domSlug){
+  const jsonNode = document.getElementById(`${domSlug}-chart-data`)
+  const jsonText = jsonNode.textContent;
+  const jsonData = JSON.parse(jsonText);
+
+  const heightData = jsonData.map(([time, height, _period]) => [time, height])
+  const periodData = jsonData.map(([time, _h, period]) => [time, period])
+  
+  Sparkline(`#${domSlug}-height-chart`, heightData)
+  Sparkline(`#${domSlug}-period-chart`, periodData)
+}

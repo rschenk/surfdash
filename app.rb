@@ -12,6 +12,8 @@ require './lib/freeman_scraper'
 require './lib/freeman_presenter'
 require './lib/checkthewaves_scraper'
 require './lib/checkthewaves_presenter'
+require './lib/ndbc_scraper'
+require './lib/ndbc_presenter'
 
 get '/' do
   erb :index
@@ -48,7 +50,6 @@ get '/cflsurf' do
   erb :cflsurf, locals: { cflsurf: CflsurfPresenter.new(CflsurfScraper.new) }
 end
 
-
 get '/freeman' do
   # mock_request('freeman_scraper')
 
@@ -65,8 +66,25 @@ get '/weather' do
   weather['html']
 end
 
+get '/buoy_41113' do
+  # mock_request('ndbc_scraper_web') do
+    erb :ndbc, locals: {
+      title: 'Canaveral Nearshore',
+      buoy: NdbcPresenter.new(NdbcScraper.new(41113))
+    }
+  # end
+end
 
-def mock_request(cassette_name)
+get '/buoy_41009' do
+  # mock_request('ndbc_scraper_web') do
+    erb :ndbc, locals: {
+      title: 'Canaveral 20 Mile',
+      buoy: NdbcPresenter.new(NdbcScraper.new(41009))
+    }
+  # end
+end
+
+def mock_request(cassette_name, &block)
   require 'vcr'
 
   VCR.configure do |config|
@@ -74,5 +92,5 @@ def mock_request(cassette_name)
     config.hook_into :webmock
   end
 
-  VCR.insert_cassette(cassette_name)
+  VCR.use_cassette(cassette_name, &block)
 end

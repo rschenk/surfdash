@@ -1,0 +1,41 @@
+<header>
+  <h3><a href="<%= buoy.url %>"><%= title %> (<%= buoy.station_id %>)</a></h3>
+  <div class='updated-at'><%= buoy.updated_at_string %></div>
+</header>
+
+<div class="buoy-conditions">
+  <div class="metric wave-height">
+    <div class="title">Height</div>
+    <div class="measurement">
+      <%= buoy.wave_height %><span class="unit">ft</span>
+    </div>
+  </div>
+  <div class="metric dominant-period">
+    <div class="title">Dominant</div>
+    <div class="measurement">
+      <%= buoy.dominant_period %><span class="unit">s</span>
+    </div>
+  </div>
+  <div class="metric average-period">
+    <div class="title">Average</div>
+    <div class="measurement">
+      <%= buoy.average_period %><span class="unit">s</span>
+    </div>
+  </div>
+  <div class="metric direction">
+    <div class="title">Direction</div>
+    <div class="measurement">
+      <%= buoy.direction %>
+    </div>
+  </div>
+</div>
+
+<div class="charts">
+  <div id="<%= buoy.dom_id %>-height-chart" class="sparkline"></div>
+  <div id="<%= buoy.dom_id %>-period-chart" class="sparkline"></div>
+</div>
+
+<script type="application/json" id="<%= buoy.dom_id %>-chart-data">
+  <%= buoy.swell_time_series.to_json %>
+</script>
+

@@ -15,6 +15,9 @@ gem 'nokogiri'
 # Natural language date parser
 gem 'chronic'
 
+# Better CSV parsing
+gem 'smarter_csv', git: 'https://github.com/tilo/smarter_csv', branch: '2.0.0.pre2'
+
 group :test do
   # test framework
   gem 'rack-test'

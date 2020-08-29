@@ -188,13 +188,19 @@ func_exec_program ()
 
   if test -f "$progdir/$program"; then
     # Add our own library path to DYLD_LIBRARY_PATH
-    DYLD_LIBRARY_PATH="/Users/rschenk/Downloads/xtide-2.15.2/.libs:$progdir:$DYLD_LIBRARY_PATH"
+    DYLD_LIBRARY_PATH="$progdir:$DYLD_LIBRARY_PATH"
 
     # Some systems cannot cope with colon-terminated DYLD_LIBRARY_PATH
     # The second colon is a workaround for a bug in BeOS R4 sed
     DYLD_LIBRARY_PATH=`$ECHO "$DYLD_LIBRARY_PATH" | /usr/bin/sed 's/::*$//'`
 
     export DYLD_LIBRARY_PATH
+
+
+    ### RMS Add our own harmonics file
+    HFILE_PATH="$thisdir/LocalTCD:$HFILE_PATH"
+    export HFILE_PATH
+
 
     if test "$libtool_execute_magic" != "%%%MAGIC variable%%%"; then
       # Run the actual program with our arguments.

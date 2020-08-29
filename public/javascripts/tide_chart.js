@@ -4,25 +4,25 @@
   var width = 640 - margin.left - margin.right;
   var height = 60 - margin.top - margin.bottom;
 
-  var parse_time = d3.time.format.utc('%Y-%m-%d %H:%M:%S %Z').parse;
-  var format_time = d3.time.format('%-I:%M %p');
+  var parse_time = d3.utcParse('%Y-%m-%d %H:%M:%S %Z')
+  var format_time = d3.timeFormat('%-I:%M %p');
 
-  var x = d3.time.scale().range( [0, width] );
-  var y = d3.scale.linear().range( [ height, 0 ] );
+  var x = d3.scaleTime().range( [0, width] );
+  var y = d3.scaleLinear().range( [ height, 0 ] );
 
-  var xRound = d3.time.scale().rangeRound( x.range() );
-  var yRound = d3.scale.linear().rangeRound( y.range() );
+  var xRound = d3.scaleTime().rangeRound( x.range() );
+  var yRound = d3.scaleLinear().rangeRound( y.range() );
 
-  var line = d3.svg.line()
+  var line = d3.line()
         .x(function(d){ return x(d[0]); })
         .y(function(d){ return y(d[1]); })
-        .interpolate('cardinal');
+        // .curve(d3.curveCardinal);
 
-  var area = d3.svg.area()
+  var area = d3.area()
         .x(function(d){ return x(d[0]); })
         .y0( height )
         .y1(function(d){ return y(d[1]); })
-        .interpolate('cardinal');
+        // .curve(d3.curveCardinal);
 
   var svg = d3.select('#tide-chart')
         .append('svg')
@@ -37,8 +37,7 @@
   var events = svg.append('g')
     .attr('class', 'events');
 
-  d3.json( '/tide.json', function( err, data ) {
-
+  d3.json('/tide.json').then((data) => {
     // Parse all timestamps into Dates
     data.start = parse_time( data.start );
     data.end = parse_time( data.end );

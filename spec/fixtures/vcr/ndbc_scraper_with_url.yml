@@ -1,0 +1,540 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.ndbc.noaa.gov/data/5day2/41009_5day.txt
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.75.14 (KHTML,
+        like Gecko) Version/7.0.3 Safari/7046A194A
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - text/plain; charset=ISO-8859-1
+      Content-Length:
+      - '5413'
+      Connection:
+      - keep-alive
+      Date:
+      - Sat, 11 Jul 2020 14:36:03 GMT
+      Server:
+      - Apache
+      Last-Modified:
+      - Sat, 11 Jul 2020 14:28:03 GMT
+      Etag:
+      - '"b0fc-5aa2b43e5c2c0-gzip"'
+      Accept-Ranges:
+      - bytes
+      Cache-Control:
+      - max-age=600, must-revalidate
+      Via:
+      - 1.1 c3.w3.woc (squid), 1.1 c2.w3.woc (squid), 1.1 b3879c23ec3b402566708cfe9d0ddc19.cloudfront.net
+        (CloudFront)
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Accept-Encoding
+      X-Cache:
+      - Miss from cloudfront
+      X-Amz-Cf-Pop:
+      - MIA3-C3
+      X-Amz-Cf-Id:
+      - cVeHOxPaMiUd5_aHskL1nSC9GWFAl-eZHx2zZAvV59aPyH3x6qj4LA==
+    body:
+      encoding: ASCII-8BIT
+      string: |
+        #YY  MM DD hh mm WDIR WSPD GST  WVHT   DPD   APD MWD   PRES  ATMP  WTMP  DEWP  VIS PTDY  TIDE
+        #yr  mo dy hr mn degT m/s  m/s     m   sec   sec degT   hPa  degC  degC  degC  nmi  hPa    ft
+        2020 07 11 14 10 270  5.0  7.0    MM    MM    MM  MM 1013.0  27.3  28.4  26.3   MM   MM    MM
+        2020 07 11 14 00 270  6.0  7.0    MM    MM    MM  MM 1013.0  27.3  28.4  26.2   MM +0.6    MM
+        2020 07 11 13 50 260  6.0  7.0   0.7    10   4.2  92 1013.0  27.2  28.4  26.1   MM   MM    MM
+        2020 07 11 13 40 260  6.0  8.0    MM    MM    MM  MM 1013.0  27.2  28.3  26.0   MM   MM    MM
+        2020 07 11 13 30 260  6.0  8.0    MM    MM    MM  MM 1013.0  27.2  28.3  26.0   MM   MM    MM
+        2020 07 11 13 20 260  7.0  8.0    MM    MM    MM  MM 1013.0  27.2  28.3  25.9   MM   MM    MM
+        2020 07 11 13 10 260  7.0  8.0    MM    MM    MM  MM 1013.0  27.2  28.3  25.8   MM   MM    MM
+        2020 07 11 13 00 250  6.0  8.0    MM    MM    MM  MM 1013.1  27.2  28.3  25.7   MM +1.2    MM
+        2020 07 11 12 50 250  6.0  8.0   0.7     9   4.1  90 1013.1  27.2  28.3  25.5   MM   MM    MM
+        2020 07 11 12 40 250  6.0  7.0    MM    MM    MM  MM 1013.2  27.1  28.3  25.3   MM   MM    MM
+        2020 07 11 12 30 240  6.0  7.0    MM    MM    MM  MM 1013.1  27.1  28.3  25.1   MM   MM    MM
+        2020 07 11 12 20 240  6.0  8.0    MM    MM    MM  MM 1013.1  27.1  28.3  25.0   MM   MM    MM
+        2020 07 11 12 10 240  6.0  7.0    MM    MM    MM  MM 1013.0  27.1  28.3  25.0   MM   MM    MM
+        2020 07 11 12 00 230  6.0  8.0    MM    MM    MM  MM 1012.9  27.1    MM  24.9   MM +1.9    MM
+        2020 07 11 11 50 240  6.0  7.0   0.7     9   4.4  85 1012.7  27.1  28.3  24.9   MM   MM    MM
+        2020 07 11 11 40 230  5.0  7.0    MM    MM    MM  MM 1012.7  27.0  28.3  25.0   MM   MM    MM
+        2020 07 11 11 30 240  5.0  7.0    MM    MM    MM  MM 1012.7  27.0  28.3  24.9   MM   MM    MM
+        2020 07 11 11 20 230  5.0  6.0    MM    MM    MM  MM 1012.5  26.9  28.3  24.8   MM   MM    MM
+        2020 07 11 11 10 230  5.0  6.0    MM    MM    MM  MM 1012.4  26.9  28.3  24.9   MM   MM    MM
+        2020 07 11 11 00 230  5.0  6.0    MM    MM    MM  MM 1012.4  26.8  28.3  24.7   MM +0.6    MM
+        2020 07 11 10 50 230  5.0  6.0   0.7    10   4.8  90 1012.4  26.7  28.3  24.9   MM   MM    MM
+        2020 07 11 10 40 220  5.0  6.0   0.7    MM   4.8  90 1012.4  26.5  28.3  24.8   MM   MM    MM
+        2020 07 11 10 30 220  5.0  6.0    MM    MM    MM  MM 1012.3  26.4  28.3  24.8   MM   MM    MM
+        2020 07 11 10 20 220  5.0  6.0    MM    MM    MM  MM 1012.2  26.4  28.3  24.9   MM   MM    MM
+        2020 07 11 10 10 220  5.0  6.0    MM    MM    MM  MM 1012.2  26.4  28.3  24.9   MM   MM    MM
+        2020 07 11 10 00 230  5.0  6.0    MM    MM    MM  MM 1011.9  26.4  28.3  24.9   MM -0.3    MM
+        2020 07 11 09 50 240  5.0  6.0   0.7     9   4.5  79 1011.8  26.5  28.3  24.8   MM   MM    MM
+        2020 07 11 09 40 250  4.0  6.0    MM    MM    MM  MM 1011.6  26.5  28.3  24.6   MM   MM    MM
+        2020 07 11 09 30 260  5.0  6.0    MM    MM    MM  MM 1011.3  26.4  28.3  24.6   MM   MM    MM
+        2020 07 11 09 20 260  5.0  5.0    MM    MM    MM  MM 1011.1  26.4  28.3  24.6   MM   MM    MM
+        2020 07 11 09 10 260  4.0  6.0    MM    MM    MM  MM 1011.0  26.3  28.3  24.6   MM   MM    MM
+        2020 07 11 09 00 250  4.0  6.0    MM    MM    MM  MM 1010.9    MM    MM    MM   MM -1.9    MM
+        2020 07 11 08 50 250  5.0  6.0   0.7     9   4.1  72 1011.0  26.3  28.4  24.5   MM   MM    MM
+        2020 07 11 08 40 250  5.0  7.0   0.7    MM   4.1  72 1011.2  26.4  28.4  24.6   MM   MM    MM
+        2020 07 11 08 30 250  5.0  7.0    MM    MM    MM  MM 1011.2  26.4  28.4  24.4   MM   MM    MM
+        2020 07 11 08 20 240  6.0  7.0    MM    MM    MM  MM 1011.4  26.4  28.3  24.3   MM   MM    MM
+        2020 07 11 08 10 240  6.0  7.0    MM    MM    MM  MM 1011.7  26.5  28.3  24.4   MM   MM    MM
+        2020 07 11 08 00 250  5.0  7.0    MM    MM    MM  MM 1011.8  26.5    MM  24.6   MM -0.6    MM
+        2020 07 11 07 50 250  6.0  7.0   0.8     9   3.8  75 1011.9  26.5  28.3  24.5   MM   MM    MM
+        2020 07 11 07 40 220  4.0  6.0    MM    MM    MM  MM 1011.9  26.7  28.3  24.2   MM   MM    MM
+        2020 07 11 07 30 230  4.0  5.0    MM    MM    MM  MM 1011.8  26.7  28.3  23.6   MM   MM    MM
+        2020 07 11 07 20 250  6.0  7.0    MM    MM    MM  MM 1012.0  26.7  28.3  24.0   MM   MM    MM
+        2020 07 11 07 10 240  6.0  8.0    MM    MM    MM  MM 1012.2  26.6  28.3  24.1   MM   MM    MM
+        2020 07 11 07 00 250  6.0  8.0    MM    MM    MM  MM 1012.3  26.7  28.3  24.5   MM -1.2    MM
+        2020 07 11 06 50 240  6.0  8.0   0.8     9   3.7  85 1012.3  26.7  28.3  24.5   MM   MM    MM
+        2020 07 11 06 40 250  7.0  8.0    MM    MM    MM  MM 1012.4  26.9  28.3  24.8   MM   MM    MM
+        2020 07 11 06 30 250  7.0  9.0    MM    MM    MM  MM 1012.7  26.9  28.3  24.7   MM   MM    MM
+        2020 07 11 06 20 240  7.0  9.0    MM    MM    MM  MM 1012.8  26.9  28.3  24.8   MM   MM    MM
+        2020 07 11 06 10 240  7.0  9.0    MM    MM    MM  MM 1012.9  26.9  28.3  24.8   MM   MM    MM
+        2020 07 11 06 00 250  7.0  9.0    MM    MM    MM  MM 1012.8  27.0    MM  25.0   MM -0.9    MM
+        2020 07 11 05 50 250  8.0 10.0   0.8     9   3.9  85 1012.9  27.0  28.3  25.2   MM   MM    MM
+        2020 07 11 05 40 250  8.0 10.0    MM    MM    MM  MM 1012.9  27.1  28.3  25.3   MM   MM    MM
+        2020 07 11 05 30 240  7.0  8.0    MM    MM    MM  MM 1012.7  27.1  28.3  25.1   MM   MM    MM
+        2020 07 11 05 20 240  7.0  9.0    MM    MM    MM  MM 1012.4  27.1  28.3  25.2   MM   MM    MM
+        2020 07 11 05 10 240  7.0  9.0    MM    MM    MM  MM 1012.5  27.2  28.3  25.4   MM   MM    MM
+        2020 07 11 05 00 240  7.0  9.0    MM    MM    MM  MM 1012.6  27.2    MM  25.4   MM -0.9    MM
+        2020 07 11 04 50 240  7.0  9.0   0.7     9   3.9  85 1012.7  27.4  28.3  25.4   MM   MM    MM
+        2020 07 11 04 40 240  8.0  9.0    MM    MM    MM  MM 1013.1  27.6  28.3  25.2   MM   MM    MM
+        2020 07 11 04 30 240  7.0  8.0    MM    MM    MM  MM 1013.2  27.7  28.3  25.4   MM   MM    MM
+        2020 07 11 04 20 240  7.0  9.0    MM    MM    MM  MM 1013.2  27.6  28.3  25.6   MM   MM    MM
+        2020 07 11 04 10 240  7.0 10.0    MM    MM    MM  MM 1013.3  28.0  28.3  26.6   MM   MM    MM
+        2020 07 11 04 00 210  8.0  9.0    MM    MM    MM  MM 1013.5  28.6  28.3  26.8   MM   MM    MM
+        2020 07 11 03 50 210  7.0  9.0   0.6    10   3.8 100 1013.7  28.6  28.3  27.3   MM   MM    MM
+        2020 07 11 03 40 210  7.0  8.0    MM    MM    MM  MM 1013.8  28.6  28.3  27.3   MM   MM    MM
+        2020 07 11 03 30 200  6.0  8.0    MM    MM    MM  MM 1013.8  28.6  28.3  27.3   MM   MM    MM
+        2020 07 11 03 20 200  6.0  7.0    MM    MM    MM  MM 1013.8  28.6  28.3  27.2   MM   MM    MM
+        2020 07 11 03 10 200  6.0  7.0    MM    MM    MM  MM 1013.7  28.6  28.3  26.9   MM   MM    MM
+        2020 07 11 03 00 190  6.0  7.0    MM    MM    MM  MM 1013.7  28.7  28.4  26.5   MM +0.4    MM
+        2020 07 11 02 50 200  6.0  6.0   0.6     9   4.1  82 1013.7  28.7  28.4  26.4   MM   MM    MM
+        2020 07 11 02 40 200  6.0  7.0   0.6    MM   4.1  82 1013.7  28.7    MM  26.5   MM   MM    MM
+        2020 07 11 02 30 190  6.0  7.0    MM    MM    MM  MM 1013.5  28.8  28.4  26.4   MM   MM    MM
+        2020 07 11 02 20 180  6.0  7.0    MM    MM    MM  MM 1013.5  28.8  28.4  26.3   MM   MM    MM
+        2020 07 11 02 00 180  5.0  7.0    MM    MM    MM  MM 1013.3  28.9    MM  25.9   MM +0.4    MM
+        2020 07 11 00 40 180  5.0  6.0    MM    MM    MM  MM 1013.4  28.8  28.7  27.0   MM   MM    MM
+        2020 07 11 00 30 170  5.0  6.0    MM    MM    MM  MM 1013.5  29.0    MM  26.2   MM   MM    MM
+        2020 07 11 00 20 170  5.0  6.0    MM    MM    MM  MM 1013.5  29.0    MM  26.0   MM   MM    MM
+        2020 07 11 00 10 170  5.0  6.0    MM    MM    MM  MM 1013.2  29.1    MM  26.0   MM   MM    MM
+        2020 07 11 00 00 170  5.0  6.0    MM    MM    MM  MM 1013.3  29.0    MM  26.2   MM   MM    MM
+        2020 07 10 23 50 160  5.0  6.0   0.5    MM   6.0  74 1013.5  29.0  28.8  26.2   MM   MM    MM
+        2020 07 10 23 40 160  4.0  4.0    MM    MM    MM  MM 1013.1    MM    MM    MM   MM   MM    MM
+        2020 07 10 23 30 160  4.0  5.0    MM    MM    MM  MM 1013.1  29.0  28.8  25.8   MM   MM    MM
+        2020 07 10 23 20 170  5.0  5.0    MM    MM    MM  MM 1013.0  29.1  28.8  25.6   MM   MM    MM
+        2020 07 10 23 10 160  4.0  5.0    MM    MM    MM  MM 1013.2  29.0  28.7  25.7   MM   MM    MM
+        2020 07 10 23 00 150  4.0  4.0    MM    MM    MM  MM 1012.9    MM  28.8    MM   MM   MM    MM
+        2020 07 10 22 50 170  4.0  4.0    MM    MM    MM  MM 1012.9  28.9  28.9  26.0   MM   MM    MM
+        2020 07 10 20 40 200  3.0  4.0    MM    MM    MM  MM 1012.9    MM    MM    MM   MM   MM    MM
+        2020 07 10 20 10 200  3.0  4.0    MM    MM    MM  MM 1012.8    MM  28.7    MM   MM   MM    MM
+        2020 07 10 19 10 210  4.0  4.0    MM    MM    MM  MM 1013.0    MM  28.8    MM   MM   MM    MM
+        2020 07 10 19 00 210  4.0  5.0    MM    MM    MM  MM 1013.2    MM    MM    MM   MM   MM    MM
+        2020 07 10 18 50 220  4.0  4.0    MM    MM    MM  MM 1013.7  28.3    MM  25.8   MM   MM    MM
+        2020 07 10 18 20 210  3.0  4.0    MM    MM    MM  MM 1013.7    MM  28.8    MM   MM   MM    MM
+        2020 07 10 18 00 210  3.0  4.0    MM    MM    MM  MM 1014.1  28.0    MM  26.0   MM   MM    MM
+        2020 07 10 16 40 260  4.0  4.0    MM    MM    MM  MM 1014.7  27.7    MM  25.5   MM   MM    MM
+        2020 07 10 16 20 270  4.0  5.0    MM    MM    MM  MM 1014.1  27.8  28.5  25.3   MM   MM    MM
+        2020 07 10 16 10 270  5.0  6.0    MM    MM    MM  MM 1014.2    MM    MM    MM   MM   MM    MM
+        2020 07 10 15 40 270  5.0  7.0    MM    MM    MM  MM 1014.6  28.0  28.6  25.8   MM   MM    MM
+        2020 07 10 13 40 280  7.0  9.0    MM    MM    MM  MM 1014.4  27.6    MM  26.0   MM   MM    MM
+        2020 07 10 13 00 260  7.0  9.0    MM    MM    MM  MM 1013.9    MM    MM    MM   MM   MM    MM
+        2020 07 10 12 20 270  8.0 10.0    MM    MM    MM  MM 1013.6  27.4  28.6  25.9   MM   MM    MM
+        2020 07 10 12 00 260  7.0  9.0    MM    MM    MM  MM 1013.5    MM    MM    MM   MM   MM    MM
+        2020 07 10 11 40 260  7.0  9.0    MM    MM    MM  MM 1013.6  27.3  28.6  26.0   MM   MM    MM
+        2020 07 10 11 30 250  7.0  9.0    MM    MM    MM  MM 1013.3    MM    MM    MM   MM   MM    MM
+        2020 07 10 11 20 260  8.0  9.0    MM    MM    MM  MM 1013.5  27.4  28.6  26.1   MM   MM    MM
+        2020 07 10 10 30 240  7.0  9.0    MM    MM    MM  MM 1013.0    MM  28.6    MM   MM   MM    MM
+        2020 07 10 09 40 250  6.0  8.0    MM    MM    MM  MM 1012.8  27.4  28.7  26.2   MM   MM    MM
+        2020 07 10 09 10 240  6.0  8.0    MM    MM    MM  MM 1012.6    MM  28.7    MM   MM   MM    MM
+        2020 07 10 08 40 250  6.0  8.0    MM    MM    MM  MM 1012.9  27.6  28.7  25.9   MM   MM    MM
+        2020 07 10 08 20 240  6.0  7.0    MM    MM    MM  MM 1012.8    MM    MM    MM   MM   MM    MM
+        2020 07 10 08 00 260  6.0  8.0    MM    MM    MM  MM 1012.7    MM    MM    MM   MM   MM    MM
+        2020 07 10 07 40 270  7.0  9.0    MM    MM    MM  MM 1012.6  27.8  28.6  25.6   MM   MM    MM
+        2020 07 10 07 20 260  7.0  8.0    MM    MM    MM  MM 1012.4    MM  28.6    MM   MM   MM    MM
+        2020 07 10 07 10 260  7.0  9.0    MM    MM    MM  MM 1012.5    MM  28.7    MM   MM   MM    MM
+        2020 07 10 06 40 270  8.0  9.0    MM    MM    MM  MM 1012.9  28.2  28.8  25.5   MM   MM    MM
+        2020 07 10 06 30 260  8.0 10.0    MM    MM    MM  MM 1012.6    MM  28.8    MM   MM   MM    MM
+        2020 07 10 06 10 260  9.0 11.0    MM    MM    MM  MM 1012.7    MM    MM    MM   MM   MM    MM
+        2020 07 10 05 40 270  7.0 10.0    MM    MM    MM  MM 1013.2  28.6    MM  25.0   MM   MM    MM
+        2020 07 10 05 30 260  7.0  9.0    MM    MM    MM  MM 1013.2  28.8    MM  25.1   MM   MM    MM
+        2020 07 10 05 10 260  7.0  9.0    MM    MM    MM  MM 1013.2    MM    MM    MM   MM   MM    MM
+        2020 07 10 04 40 260  7.0  9.0    MM    MM    MM  MM 1012.8  29.3    MM  25.1   MM   MM    MM
+        2020 07 10 04 30 250  7.0  9.0    MM    MM    MM  MM 1012.5  29.5    MM  25.2   MM   MM    MM
+        2020 07 10 04 20 230  6.0  8.0    MM    MM    MM  MM 1012.6    MM  28.8    MM   MM   MM    MM
+        2020 07 10 03 30 180  8.0 10.0    MM    MM    MM  MM 1012.5    MM  28.9    MM   MM   MM    MM
+        2020 07 10 03 20 170  8.0 10.0    MM    MM    MM  MM 1012.5    MM    MM    MM   MM   MM    MM
+        2020 07 10 03 00 180  8.0  9.0    MM    MM    MM  MM 1012.8  28.9    MM  26.8   MM   MM    MM
+        2020 07 10 02 40 180  8.0  9.0    MM    MM    MM  MM 1012.9  29.0  28.9  26.8   MM   MM    MM
+        2020 07 10 02 00 170  9.0 12.0    MM    MM    MM  MM 1011.9    MM  28.9    MM   MM   MM    MM
+        2020 07 10 01 40 170 10.0 12.0    MM    MM    MM  MM 1011.6  29.2  28.9  27.1   MM   MM    MM
+        2020 07 10 00 40 160  8.0 10.0    MM    MM    MM  MM 1011.5  29.3  29.1  26.9   MM   MM    MM
+        2020 07 10 00 30 160  8.0  9.0    MM    MM    MM  MM 1011.3  29.4    MM  26.9   MM   MM    MM
+        2020 07 09 23 50 150  6.0  7.0    MM    MM    MM  MM 1011.4    MM    MM    MM   MM   MM    MM
+        2020 07 09 23 40 160  6.0  7.0    MM    MM    MM  MM 1011.4  29.5    MM  26.6   MM   MM    MM
+        2020 07 09 23 30 150  6.0  7.0    MM    MM    MM  MM 1011.5  29.6  29.3  26.7   MM   MM    MM
+        2020 07 09 23 10 140  5.0  6.0    MM    MM    MM  MM 1011.3    MM  29.3    MM   MM   MM    MM
+        2020 07 09 22 50 150  5.0  6.0    MM    MM    MM  MM 1011.2    MM    MM    MM   MM   MM    MM
+        2020 07 09 22 00 150  5.0  6.0    MM    MM    MM  MM 1011.3    MM    MM    MM   MM -0.9    MM
+        2020 07 09 21 40 150  5.0  6.0    MM    MM    MM  MM 1011.6  29.6    MM  26.4   MM   MM    MM
+        2020 07 09 21 20 130  4.0  5.0    MM    MM    MM  MM 1011.3    MM  29.3    MM   MM   MM    MM
+        2020 07 09 21 10 130  4.0  5.0    MM    MM    MM  MM 1011.4    MM    MM    MM   MM   MM    MM
+        2020 07 09 21 00 140  4.0  5.0    MM    MM    MM  MM 1011.6  29.6    MM  25.8   MM -1.1    MM
+        2020 07 09 20 10 130  3.0  4.0    MM    MM    MM  MM 1011.9    MM  28.9    MM   MM   MM    MM
+        2020 07 09 20 00 130  3.0  4.0    MM    MM    MM  MM 1011.8    MM    MM    MM   MM   MM    MM
+        2020 07 09 19 40 140  3.0  3.0    MM    MM    MM  MM 1012.4  29.3    MM  25.9   MM   MM    MM
+        2020 07 09 19 20 160  2.0  3.0    MM    MM    MM  MM 1012.6  29.3    MM  26.0   MM   MM    MM
+        2020 07 09 19 00 160  2.0  3.0    MM    MM    MM  MM 1012.2    MM    MM    MM   MM   MM    MM
+        2020 07 09 18 10 200  2.0  3.0    MM    MM    MM  MM 1012.6    MM    MM    MM   MM   MM    MM
+        2020 07 09 18 00 210  2.0  2.0    MM    MM    MM  MM 1012.7    MM    MM    MM   MM   MM    MM
+        2020 07 09 17 40 210  2.0  2.0    MM    MM    MM  MM 1012.9    MM    MM    MM   MM   MM    MM
+        2020 07 09 17 30 220  2.0  2.0    MM    MM    MM  MM 1013.0    MM  28.8    MM   MM   MM    MM
+        2020 07 09 17 00 230  3.0  3.0    MM    MM    MM  MM 1013.7  28.3    MM  26.3   MM   MM    MM
+        2020 07 09 16 20 260  3.0  4.0    MM    MM    MM  MM 1013.3  28.2    MM  26.3   MM   MM    MM
+        2020 07 09 16 00 260  4.0  5.0    MM    MM    MM  MM 1013.5  28.1    MM  26.1   MM +0.0    MM
+        2020 07 09 15 40 250  4.0  5.0    MM    MM    MM  MM 1013.1    MM  28.7    MM   MM   MM    MM
+        2020 07 09 15 30 270  5.0  6.0    MM    MM    MM  MM 1013.5  27.8    MM  26.0   MM   MM    MM
+        2020 07 09 15 20 270  5.0  6.0    MM    MM    MM  MM 1013.4  27.7  28.6  26.1   MM   MM    MM
+        2020 07 09 15 10 270  5.0  6.0    MM    MM    MM  MM 1013.0  27.7    MM  26.1   MM   MM    MM
+        2020 07 09 14 40 270  5.0  6.0    MM    MM    MM  MM 1013.3  27.4  28.6  26.0   MM   MM    MM
+        2020 07 09 14 30 270  5.0  6.0    MM    MM    MM  MM 1013.7  27.4  28.6  26.1   MM   MM    MM
+        2020 07 09 14 10 260  5.0  7.0    MM    MM    MM  MM 1013.7  27.3  28.6  26.1   MM   MM    MM
+        2020 07 09 13 40 270  7.0  8.0    MM    MM    MM  MM 1013.2  27.2  28.5  26.0   MM   MM    MM
+        2020 07 09 13 30 270  6.0  8.0    MM    MM    MM  MM 1013.5  27.2  28.5  26.1   MM   MM    MM
+        2020 07 09 13 10 270  7.0  8.0    MM    MM    MM  MM 1013.6  27.1  28.5  26.0   MM   MM    MM
+        2020 07 09 13 00 270  7.0  8.0    MM    MM    MM  MM 1013.3  27.1    MM  25.9   MM +1.2    MM
+        2020 07 09 12 40 270  7.0  9.0    MM    MM    MM  MM 1013.6  27.1  28.5  25.9   MM   MM    MM
+        2020 07 09 12 30 270  7.0  9.0    MM    MM    MM  MM 1013.7  27.1  28.5  25.9   MM   MM    MM
+        2020 07 09 12 20 270  7.0  8.0    MM    MM    MM  MM 1013.6  27.1  28.5  25.9   MM   MM    MM
+        2020 07 09 11 50 270  7.0  9.0    MM    MM    MM  MM 1013.3  27.1  28.5  25.7   MM   MM    MM
+        2020 07 09 11 30 260  7.0  8.0    MM    MM    MM  MM 1013.2  27.0  28.5  25.7   MM   MM    MM
+        2020 07 09 11 20 270  7.0  9.0    MM    MM    MM  MM 1013.1  27.0    MM  25.7   MM   MM    MM
+        2020 07 09 10 40 270  7.0 10.0    MM    MM    MM  MM 1012.7  27.1  28.5  25.7   MM   MM    MM
+        2020 07 09 10 30 270  7.0 10.0    MM    MM    MM  MM 1012.6  27.1    MM  25.6   MM   MM    MM
+        2020 07 09 10 20 270  7.0  8.0    MM    MM    MM  MM 1012.5  27.1    MM  25.7   MM   MM    MM
+        2020 07 09 10 00 260  6.0  8.0    MM    MM    MM  MM 1012.1    MM  28.5    MM   MM   MM    MM
+        2020 07 09 09 40 270  7.0  9.0    MM    MM    MM  MM 1011.7  27.2    MM  25.6   MM   MM    MM
+        2020 07 09 09 30 270  7.0  9.0    MM    MM    MM  MM 1011.7  27.2    MM  25.6   MM   MM    MM
+        2020 07 09 09 20 260  7.0  9.0    MM    MM    MM  MM 1011.7  27.2    MM  25.5   MM   MM    MM
+        2020 07 09 09 10 260  8.0 10.0    MM    MM    MM  MM 1011.8  27.2  28.5  25.5   MM   MM    MM
+        2020 07 09 09 00 250  7.0  9.0    MM    MM    MM  MM 1011.6    MM    MM    MM   MM   MM    MM
+        2020 07 09 08 40 270  8.0 10.0    MM    MM    MM  MM 1011.6  27.3  28.6  25.6   MM   MM    MM
+        2020 07 09 08 30 260  7.0  9.0    MM    MM    MM  MM 1011.7  27.3    MM  25.5   MM   MM    MM
+        2020 07 09 08 10 260  7.0  9.0    MM    MM    MM  MM 1012.1  27.4  28.6  25.5   MM   MM    MM
+        2020 07 09 07 40 260  7.0  9.0    MM    MM    MM  MM 1012.2  27.4    MM  25.4   MM   MM    MM
+        2020 07 09 07 30 270  7.0  9.0    MM    MM    MM  MM 1012.3  27.4  28.6  25.4   MM   MM    MM
+        2020 07 09 07 20 270  7.0  9.0    MM    MM    MM  MM 1012.2  27.5  28.6  25.5   MM   MM    MM
+        2020 07 09 07 10 260  7.0  9.0    MM    MM    MM  MM 1012.3  27.5  28.6  25.5   MM   MM    MM
+        2020 07 09 06 40 260  8.0 10.0    MM    MM    MM  MM 1012.6  27.6  28.7  25.5   MM   MM    MM
+        2020 07 09 06 30 260  8.0 10.0    MM    MM    MM  MM 1012.3  27.7    MM  25.5   MM   MM    MM
+        2020 07 09 06 20 260  8.0 11.0    MM    MM    MM  MM 1012.5  27.7    MM  25.5   MM   MM    MM
+        2020 07 09 06 10 260  8.0 11.0    MM    MM    MM  MM 1012.7  27.8  28.7  25.4   MM   MM    MM
+        2020 07 09 05 40 250  8.0 10.0    MM    MM    MM  MM 1012.8  28.0  28.7  25.5   MM   MM    MM
+        2020 07 09 05 30 250  8.0 10.0    MM    MM    MM  MM 1013.1  28.0  28.7  25.4   MM   MM    MM
+        2020 07 09 05 20 250  8.0 10.0    MM    MM    MM  MM 1013.0  28.0    MM  25.4   MM   MM    MM
+        2020 07 09 05 10 260  8.0 10.0    MM    MM    MM  MM 1013.0  28.1    MM  25.5   MM   MM    MM
+        2020 07 09 04 40 240  8.0  9.0    MM    MM    MM  MM 1012.9    MM  28.7    MM   MM   MM    MM
+        2020 07 09 04 30 260  8.0 10.0    MM    MM    MM  MM 1012.9  28.3    MM  25.2   MM   MM    MM
+        2020 07 09 04 20 260  8.0 10.0    MM    MM    MM  MM 1012.9  28.3    MM  25.2   MM   MM    MM
+        2020 07 09 04 10 260  7.0  9.0    MM    MM    MM  MM 1012.8  28.3    MM  25.5   MM   MM    MM
+        2020 07 09 03 40 240  7.0  9.0    MM    MM    MM  MM 1013.2  28.4  28.7  25.7   MM   MM    MM
+        2020 07 09 03 10 240  7.0  9.0    MM    MM    MM  MM 1013.1  28.5  28.6  25.8   MM   MM    MM
+        2020 07 09 02 40 230  6.0  8.0    MM    MM    MM  MM 1013.0  28.5    MM  26.1   MM   MM    MM
+        2020 07 09 02 30 230  6.0  8.0    MM    MM    MM  MM 1013.3  28.5  28.7  26.1   MM   MM    MM
+        2020 07 09 02 10 230  6.0  7.0    MM    MM    MM  MM 1012.7  28.4  28.7  26.2   MM   MM    MM
+        2020 07 09 01 40 230  6.0  7.0    MM    MM    MM  MM 1012.4  28.3  28.7  26.0   MM   MM    MM
+        2020 07 09 01 30 230  6.0  7.0    MM    MM    MM  MM 1012.4  28.2  28.7  25.8   MM   MM    MM
+        2020 07 09 00 50 230  6.0  8.0    MM    MM    MM  MM 1012.0  28.1    MM  25.7   MM   MM    MM
+        2020 07 09 00 30 220  6.0  7.0    MM    MM    MM  MM 1012.0    MM    MM    MM   MM   MM    MM
+        2020 07 09 00 20 220  6.0  8.0    MM    MM    MM  MM 1012.1    MM    MM    MM   MM   MM    MM
+        2020 07 09 00 00 220  6.0  8.0    MM    MM    MM  MM 1012.1    MM  28.8    MM   MM   MM    MM
+        2020 07 08 23 40 220  6.0  8.0    MM    MM    MM  MM 1012.2    MM  28.8    MM   MM   MM    MM
+        2020 07 08 23 30 240  7.0  8.0    MM    MM    MM  MM 1012.5  27.9    MM  25.2   MM   MM    MM
+        2020 07 08 23 20 230  6.0  8.0    MM    MM    MM  MM 1012.2    MM    MM    MM   MM   MM    MM
+        2020 07 08 23 10 240  7.0  8.0    MM    MM    MM  MM 1012.2  27.8    MM  25.2   MM   MM    MM
+        2020 07 08 23 00 230  6.0  8.0    MM    MM    MM  MM 1012.2    MM  28.8    MM   MM   MM    MM
+        2020 07 08 22 50 240  7.0  9.0   0.7    MM   3.6 247 1012.5  27.7  28.8  24.9   MM   MM    MM
+        2020 07 08 22 30 230  7.0  9.0    MM    MM    MM  MM 1012.2  27.6  28.8  24.9   MM   MM    MM
+        2020 07 08 22 20 230  7.0  9.0    MM    MM    MM  MM 1012.1  27.5  28.8  24.9   MM   MM    MM
+        2020 07 08 22 10 230  7.0  9.0    MM    MM    MM  MM 1012.4  27.4    MM  24.8   MM   MM    MM
+        2020 07 08 22 00 230  7.0  9.0    MM    MM    MM  MM 1012.2    MM  28.8    MM   MM   MM    MM
+        2020 07 08 19 30 240  8.0 10.0    MM    MM    MM  MM 1013.9  26.8    MM  24.5   MM   MM    MM
+        2020 07 08 19 20 240  8.0 10.0    MM    MM    MM  MM 1013.8  26.7    MM  24.2   MM   MM    MM
+        2020 07 08 19 10 240  6.0  8.0    MM    MM    MM  MM 1014.2  26.1  28.9  23.9   MM   MM    MM
+        2020 07 08 18 40 240  9.0 11.0    MM    MM    MM  MM 1014.3  25.7    MM  23.6   MM   MM    MM
+        2020 07 08 18 30 250 10.0 14.0    MM    MM    MM  MM 1014.3  25.1    MM  23.2   MM   MM    MM
+        2020 07 08 18 00 250  3.0  4.0    MM    MM    MM  MM 1014.5  28.0    MM  25.3   MM -1.3    MM
+        2020 07 08 17 40 270  3.0  3.0    MM    MM    MM  MM 1014.7  27.9    MM  25.3   MM   MM    MM
+        2020 07 08 17 30 270  3.0  4.0    MM    MM    MM  MM 1015.2  27.8    MM  25.2   MM   MM    MM
+        2020 07 08 17 20 270  3.0  4.0    MM    MM    MM  MM 1015.5  27.6    MM  25.1   MM   MM    MM
+        2020 07 08 17 10 290  3.0  4.0    MM    MM    MM  MM 1015.3  27.4    MM  25.2   MM   MM    MM
+        2020 07 08 16 40 220  5.0  6.0    MM    MM    MM  MM 1015.4  28.5  29.0  25.4   MM   MM    MM
+        2020 07 08 16 30 230  5.0  6.0    MM    MM    MM  MM 1015.6  28.4  28.9  25.3   MM   MM    MM
+        2020 07 08 16 20 230  5.0  6.0    MM    MM    MM  MM 1015.5  28.3  28.9  25.5   MM   MM    MM
+        2020 07 08 16 10 220  5.0  6.0    MM    MM    MM  MM 1015.4    MM  28.9    MM   MM   MM    MM
+        2020 07 08 16 00 220  5.0  6.0    MM    MM    MM  MM 1015.5    MM  28.9    MM   MM +0.0    MM
+        2020 07 08 15 40 230  5.0  6.0    MM    MM    MM  MM 1016.0  28.0  28.8  25.4   MM   MM    MM
+        2020 07 08 15 30 230  5.0  6.0    MM    MM    MM  MM 1015.8    MM  28.8    MM   MM   MM    MM
+        2020 07 08 15 10 240  5.0  6.0    MM    MM    MM  MM 1016.1  27.8  28.7  25.4   MM   MM    MM
+        2020 07 08 15 00 230  5.0  7.0    MM    MM    MM  MM 1015.8    MM    MM    MM   MM   MM    MM
+        2020 07 08 14 50 240  6.0  7.0    MM    MM    MM  MM 1015.7  27.8    MM  25.1   MM   MM    MM
+        2020 07 08 14 40 240  6.0  7.0    MM    MM    MM  MM 1015.8  27.8  28.7  25.1   MM   MM    MM
+        2020 07 08 14 30 230  5.0  7.0    MM    MM    MM  MM 1015.8    MM  28.7    MM   MM   MM    MM
+        2020 07 08 14 20 230  6.0  6.0    MM    MM    MM  MM 1015.7    MM  28.7    MM   MM   MM    MM
+        2020 07 08 14 10 240  6.0  7.0    MM    MM    MM  MM 1016.0  27.8  28.7  24.8   MM   MM    MM
+        2020 07 08 13 50 240  6.0  8.0    MM    MM    MM  MM 1015.9  27.6  28.6  25.0   MM   MM    MM
+        2020 07 08 13 40 230  6.0  8.0    MM    MM    MM  MM 1015.6    MM  28.6    MM   MM   MM    MM
+        2020 07 08 13 30 230  7.0  8.0    MM    MM    MM  MM 1015.5    MM  28.7    MM   MM   MM    MM
+        2020 07 08 13 20 230  6.0  7.0    MM    MM    MM  MM 1015.5    MM  28.7    MM   MM   MM    MM
+        2020 07 08 13 10 220  6.0  7.0    MM    MM    MM  MM 1015.6    MM  28.7    MM   MM   MM    MM
+        2020 07 08 13 00 220  6.0  7.0    MM    MM    MM  MM 1015.6    MM    MM    MM   MM   MM    MM
+        2020 07 08 12 50 220  6.0  8.0    MM    MM    MM  MM 1015.6    MM  28.7    MM   MM   MM    MM
+        2020 07 08 12 40 240  6.0  8.0    MM    MM    MM  MM 1015.8  27.5    MM  25.5   MM   MM    MM
+        2020 07 08 12 30 230  6.0  8.0    MM    MM    MM  MM 1015.5    MM  28.6    MM   MM   MM    MM
+        2020 07 08 12 20 230  6.0  7.0    MM    MM    MM  MM 1015.4    MM  28.6    MM   MM   MM    MM
+        2020 07 08 12 10 230  6.0  7.0    MM    MM    MM  MM 1015.4    MM    MM    MM   MM   MM    MM
+        2020 07 08 11 40 230  6.0  7.0    MM    MM    MM  MM 1015.5    MM  28.6    MM   MM   MM    MM
+        2020 07 08 11 30 230  6.0  7.0    MM    MM    MM  MM 1015.4    MM  28.6    MM   MM   MM    MM
+        2020 07 08 11 20 250  6.0  7.0    MM    MM    MM  MM 1015.7  27.5    MM  25.6   MM   MM    MM
+        2020 07 08 11 10 230  6.0  7.0    MM    MM    MM  MM 1015.5    MM  28.6    MM   MM   MM    MM
+        2020 07 08 11 00 230  6.0  7.0    MM    MM    MM  MM 1015.5    MM  28.6    MM   MM   MM    MM
+        2020 07 08 10 40 220  6.0  7.0    MM    MM    MM  MM 1015.2    MM    MM    MM   MM   MM    MM
+        2020 07 08 10 30 220  6.0  8.0    MM    MM    MM  MM 1015.2    MM  28.6    MM   MM   MM    MM
+        2020 07 08 10 20 240  7.0  8.0    MM    MM    MM  MM 1015.0  27.8  28.6  25.2   MM   MM    MM
+        2020 07 08 10 10 220  6.0  7.0    MM    MM    MM  MM 1014.7    MM  28.7    MM   MM   MM    MM
+        2020 07 08 10 00 230  7.0  8.0    MM    MM    MM  MM 1014.8  27.9  28.7  25.1   MM   MM    MM
+        2020 07 08 09 50 230  7.0  8.0    MM    MM    MM  MM 1014.6  27.9  28.7  25.1   MM   MM    MM
+        2020 07 08 09 30 220  6.0  8.0    MM    MM    MM  MM 1014.4    MM  28.7    MM   MM   MM    MM
+        2020 07 08 09 20 220  6.0  8.0    MM    MM    MM  MM 1014.5    MM  28.7    MM   MM   MM    MM
+        2020 07 08 09 10 230  6.0  8.0    MM    MM    MM  MM 1014.7  27.9  28.7  25.1   MM   MM    MM
+        2020 07 08 09 00 220  7.0  8.0    MM    MM    MM  MM 1014.5    MM  28.7    MM   MM -1.5    MM
+        2020 07 08 08 50 220  7.0  8.0    MM    MM    MM  MM 1014.8  27.9  28.7  25.0   MM   MM    MM
+        2020 07 08 08 40 230  7.0  8.0    MM    MM    MM  MM 1014.8  27.9  28.7  25.0   MM   MM    MM
+        2020 07 08 08 30 220  6.0  7.0    MM    MM    MM  MM 1014.9  28.0  28.7  25.3   MM   MM    MM
+        2020 07 08 08 20 210  6.0  8.0    MM    MM    MM  MM 1014.8    MM  28.7    MM   MM   MM    MM
+        2020 07 08 07 30 200  6.0  8.0    MM    MM    MM  MM 1015.2    MM  28.7    MM   MM   MM    MM
+        2020 07 08 07 20 200  6.0  8.0    MM    MM    MM  MM 1015.2    MM    MM    MM   MM   MM    MM
+        2020 07 08 07 10 190  6.0  7.0    MM    MM    MM  MM 1015.2    MM  28.6    MM   MM   MM    MM
+        2020 07 08 07 00 190  6.0  7.0    MM    MM    MM  MM 1015.2    MM  28.7    MM   MM   MM    MM
+        2020 07 08 06 50 210  6.0  7.0    MM    MM    MM  MM 1015.6  28.0  28.7  25.3   MM   MM    MM
+        2020 07 08 06 40 200  6.0  7.0    MM    MM    MM  MM 1015.5    MM  28.7    MM   MM   MM    MM
+        2020 07 08 06 30 200  6.0  8.0    MM    MM    MM  MM 1015.7    MM  28.7    MM   MM   MM    MM
+        2020 07 08 06 10 200  6.0  7.0    MM    MM    MM  MM 1015.9    MM  28.7    MM   MM   MM    MM
+        2020 07 08 06 00 200  7.0  8.0    MM    MM    MM  MM 1016.0    MM  28.7    MM   MM   MM    MM
+        2020 07 08 05 50 210  6.0  8.0    MM    MM    MM  MM 1016.1  28.2  28.7  25.0   MM   MM    MM
+        2020 07 08 05 40 210  6.0  8.0    MM    MM    MM  MM 1016.4  28.2  28.7  24.9   MM   MM    MM
+        2020 07 08 05 30 210  6.0  8.0    MM    MM    MM  MM 1016.5  28.2  28.7  24.8   MM   MM    MM
+        2020 07 08 04 50 200  6.0  7.0    MM    MM    MM  MM 1016.3  28.2  28.7  24.8   MM   MM    MM
+        2020 07 08 04 40 200  6.0  7.0    MM    MM    MM  MM 1016.5    MM    MM    MM   MM   MM    MM
+        2020 07 08 04 20 200  6.0  7.0    MM    MM    MM  MM 1016.7    MM  28.8    MM   MM   MM    MM
+        2020 07 08 03 50 210  6.0  8.0    MM    MM    MM  MM 1017.0  28.1  28.8  24.6   MM   MM    MM
+        2020 07 08 03 40 210  6.0  8.0    MM    MM    MM  MM 1017.0  28.2    MM  24.8   MM   MM    MM
+        2020 07 08 03 10 210  6.0  7.0    MM    MM    MM  MM 1016.9    MM  28.8    MM   MM   MM    MM
+        2020 07 08 02 40 200  5.0  6.0    MM    MM    MM  MM 1016.6    MM  28.8    MM   MM   MM    MM
+        2020 07 08 02 30 210  5.0  6.0    MM    MM    MM  MM 1016.7  28.1    MM  24.6   MM   MM    MM
+        2020 07 08 02 20 190  5.0  6.0    MM    MM    MM  MM 1016.4    MM  28.8    MM   MM   MM    MM
+        2020 07 08 02 10 190  4.0  5.0    MM    MM    MM  MM 1016.3    MM  28.8    MM   MM   MM    MM
+        2020 07 08 02 00 200  4.0  5.0    MM    MM    MM  MM 1016.6  27.9  28.8  24.7   MM   MM    MM
+        2020 07 08 01 50 200  5.0  6.0    MM    MM    MM  MM 1016.5  27.8  28.8  24.7   MM   MM    MM
+        2020 07 08 01 40 190  5.0  6.0    MM    MM    MM  MM 1016.4    MM  28.8    MM   MM   MM    MM
+        2020 07 08 01 30 190  4.0  5.0    MM    MM    MM  MM 1016.4    MM  28.8    MM   MM   MM    MM
+        2020 07 08 01 20 190  5.0  6.0    MM    MM    MM  MM 1016.4    MM  28.8    MM   MM   MM    MM
+        2020 07 08 01 10 180  4.0  6.0    MM    MM    MM  MM 1016.3    MM    MM    MM   MM   MM    MM
+        2020 07 08 00 50 180  5.0  6.0    MM    MM    MM  MM 1016.3  27.2  28.8  23.8   MM   MM    MM
+        2020 07 08 00 40 170  5.0  5.0    MM    MM    MM  MM 1016.9  26.9  28.8  24.5   MM   MM    MM
+        2020 07 08 00 30 170  5.0  6.0    MM    MM    MM  MM 1016.3  26.8    MM  24.5   MM   MM    MM
+        2020 07 08 00 20 170  5.0  5.0    MM    MM    MM  MM 1017.0  26.7  28.8  24.3   MM   MM    MM
+        2020 07 07 23 20 140  3.0  4.0    MM    MM    MM  MM 1016.3  25.8    MM  23.7   MM   MM    MM
+        2020 07 07 23 10 110  2.0  2.0    MM    MM    MM  MM 1015.6    MM    MM    MM   MM   MM    MM
+        2020 07 07 23 00 120  2.0  3.0    MM    MM    MM  MM 1015.6    MM    MM    MM   MM   MM    MM
+        2020 07 07 22 10 170  2.0  3.0    MM    MM    MM  MM 1016.7    MM  28.9    MM   MM   MM    MM
+        2020 07 07 22 00 360  1.0  2.0    MM    MM    MM  MM 1016.8    MM  28.9    MM   MM +0.0    MM
+        2020 07 07 21 50  20  1.0  2.0    MM    MM    MM  MM 1016.9  24.6  29.0  22.7   MM   MM    MM
+        2020 07 07 21 30 360  2.0  3.0    MM    MM    MM  MM 1017.2  24.0  29.0  22.7   MM   MM    MM
+        2020 07 07 21 20 290  3.0  5.0    MM    MM    MM  MM 1017.7    MM  28.9    MM   MM   MM    MM
+        2020 07 07 21 10 280  6.0  7.0    MM    MM    MM  MM 1018.1    MM  28.9    MM   MM   MM    MM
+        2020 07 07 21 00 280  9.0 11.0    MM    MM    MM  MM 1018.1    MM  28.9    MM   MM   MM    MM
+        2020 07 07 20 50 280 12.0 17.0    MM    MM    MM  MM 1018.3    MM  29.0    MM   MM   MM    MM
+        2020 07 07 20 40 260 13.0 16.0    MM    MM    MM  MM 1018.4    MM  29.1    MM   MM   MM    MM
+        2020 07 07 20 30 170  5.0  6.0    MM    MM    MM  MM 1017.9    MM  29.1    MM   MM   MM    MM
+        2020 07 07 20 10 160  6.0  7.0    MM    MM    MM  MM 1017.3  29.0  29.1  26.0   MM   MM    MM
+        2020 07 07 19 40 140  6.0  7.0    MM    MM    MM  MM 1016.5    MM  29.1    MM   MM   MM    MM
+        2020 07 07 19 30 140  5.0  6.0    MM    MM    MM  MM 1016.8    MM  29.1    MM   MM   MM    MM
+        2020 07 07 19 20 140  5.0  6.0    MM    MM    MM  MM 1016.8    MM  29.1    MM   MM   MM    MM
+        2020 07 07 19 10 150  5.0  6.0    MM    MM    MM  MM 1016.8    MM  29.1    MM   MM   MM    MM
+        2020 07 07 19 00 150  6.0  6.0    MM    MM    MM  MM 1016.8    MM  29.1    MM   MM -1.6    MM
+        2020 07 07 18 40 150  6.0  7.0    MM    MM    MM  MM 1017.1    MM  29.1    MM   MM   MM    MM
+        2020 07 07 18 30 160  6.0  7.0    MM    MM    MM  MM 1017.4  28.6    MM  25.3   MM   MM    MM
+        2020 07 07 18 10 160  5.0  6.0    MM    MM    MM  MM 1017.5    MM  29.1    MM   MM   MM    MM
+        2020 07 07 17 30 160  5.0  6.0    MM    MM    MM  MM 1017.9    MM  29.0    MM   MM   MM    MM
+        2020 07 07 17 20 180  5.0  6.0    MM    MM    MM  MM 1018.3  28.4  28.9  25.5   MM   MM    MM
+        2020 07 07 16 40 190  5.0  5.0    MM    MM    MM  MM 1018.3  28.2  28.9  25.5   MM   MM    MM
+        2020 07 07 16 10 190  5.0  5.0    MM    MM    MM  MM 1018.4    MM  28.9    MM   MM   MM    MM
+        2020 07 07 16 00 190  4.0  5.0    MM    MM    MM  MM 1018.4    MM  28.9    MM   MM +0.3    MM
+        2020 07 07 15 40 200  4.0  5.0    MM    MM    MM  MM 1018.7    MM  28.8    MM   MM   MM    MM
+        2020 07 07 15 30 210  5.0  6.0    MM    MM    MM  MM 1019.1  28.0    MM  25.5   MM   MM    MM
+        2020 07 07 15 10 200  4.0  6.0    MM    MM    MM  MM 1018.8    MM  28.8    MM   MM   MM    MM
+        2020 07 07 15 00 190  4.0  5.0    MM    MM    MM  MM 1018.7    MM  28.8    MM   MM +0.9    MM
+        2020 07 07 14 50 210  5.0  6.0   0.5     9   4.2  85 1018.7  27.9  28.8  25.4   MM   MM    MM
+        2020 07 07 14 40 210  5.0  6.0    MM    MM    MM  MM 1018.6    MM  28.7    MM   MM   MM    MM
+        2020 07 07 14 30 200  5.0  6.0    MM    MM    MM  MM 1018.6    MM  28.8    MM   MM   MM    MM
+        2020 07 07 14 20 210  5.0  6.0    MM    MM    MM  MM 1018.5  27.8    MM  25.4   MM   MM    MM
+        2020 07 07 14 10 210  5.0  6.0    MM    MM    MM  MM 1018.4  27.8  28.7  25.5   MM   MM    MM
+        2020 07 07 14 00 190  5.0  6.0    MM    MM    MM  MM 1018.4    MM  28.7    MM   MM +1.1    MM
+        2020 07 07 13 50 210  5.0  6.0   0.5     9   4.3  86 1018.4  27.9  28.7  25.6   MM   MM    MM
+        2020 07 07 13 40 210  5.0  6.0    MM    MM    MM  MM 1018.3  27.9  28.7  25.6   MM   MM    MM
+        2020 07 07 13 30 200  5.0  6.0    MM    MM    MM  MM 1018.3  27.9  28.7  25.5   MM   MM    MM
+        2020 07 07 13 20 200  5.0  6.0    MM    MM    MM  MM 1018.2  27.9  28.7  25.6   MM   MM    MM
+        2020 07 07 13 10 200  5.0  6.0    MM    MM    MM  MM 1018.2  27.8  28.7  25.5   MM   MM    MM
+        2020 07 07 13 00 200  5.0  6.0    MM    MM    MM  MM 1018.1  27.9    MM  25.7   MM +1.0    MM
+        2020 07 07 12 50 200  5.0  6.0   0.5     9   4.5  89 1018.0  27.9  28.6  25.6   MM   MM    MM
+        2020 07 07 12 40 200  5.0  7.0   0.5    MM   4.5  89 1018.0  27.9  28.6  25.7   MM   MM    MM
+        2020 07 07 12 30 200  5.0  6.0    MM    MM    MM  MM 1018.0  27.9  28.6  25.6   MM   MM    MM
+        2020 07 07 12 20 200  5.0  6.0    MM    MM    MM  MM 1017.9  27.9  28.7  25.6   MM   MM    MM
+        2020 07 07 12 10 200  5.0  6.0    MM    MM    MM  MM 1017.9  27.9  28.7  25.6   MM   MM    MM
+        2020 07 07 12 00 200  5.0  6.0    MM    MM    MM  MM 1017.8  27.9  28.7  25.4   MM +0.8    MM
+        2020 07 07 11 50 200  5.0  6.0   0.5    10   4.5  92 1017.7  27.9  28.7  25.4   MM   MM    MM
+        2020 07 07 11 40 200  5.0  6.0    MM    MM    MM  MM 1017.6  27.9  28.7  25.3   MM   MM    MM
+        2020 07 07 11 30 190  5.0  6.0    MM    MM    MM  MM 1017.6  28.0  28.7  25.3   MM   MM    MM
+        2020 07 07 11 20 200  5.0  7.0    MM    MM    MM  MM 1017.5  28.0  28.7  25.3   MM   MM    MM
+        2020 07 07 11 10 200  5.0  6.0    MM    MM    MM  MM 1017.5  28.0  28.7  25.2   MM   MM    MM
+        2020 07 07 11 00 200  5.0  6.0    MM    MM    MM  MM 1017.3  28.0  28.7  25.1   MM +0.5    MM
+        2020 07 07 10 50 200  5.0  6.0   0.5     9   4.2  88 1017.3  28.0  28.7  25.0   MM   MM    MM
+        2020 07 07 10 40 200  5.0  6.0    MM    MM    MM  MM 1017.3  27.9  28.7  24.9   MM   MM    MM
+        2020 07 07 10 30 190  5.0  6.0    MM    MM    MM  MM 1017.3  27.9  28.7  24.9   MM   MM    MM
+        2020 07 07 10 20 190  5.0  6.0    MM    MM    MM  MM 1017.2  27.9  28.7  24.9   MM   MM    MM
+        2020 07 07 10 10 200  5.0  6.0    MM    MM    MM  MM 1017.1  27.9  28.7  24.8   MM   MM    MM
+        2020 07 07 10 00 200  5.0  6.0    MM    MM    MM  MM 1017.1  27.9    MM  24.8   MM -0.0    MM
+        2020 07 07 09 50 190  4.0  5.0   0.5     9   4.4  86 1017.1  27.8  28.7  24.7   MM   MM    MM
+        2020 07 07 09 40 190  4.0  5.0   0.5    MM   4.4  86 1017.1  27.8  28.7  24.7   MM   MM    MM
+        2020 07 07 09 30 190  5.0  6.0    MM    MM    MM  MM 1017.1  27.8  28.7  24.5   MM   MM    MM
+        2020 07 07 09 20 190  5.0  6.0    MM    MM    MM  MM 1017.1  27.8  28.7  24.5   MM   MM    MM
+        2020 07 07 09 10 190  5.0  6.0    MM    MM    MM  MM 1017.0  27.9  28.7  24.3   MM   MM    MM
+        2020 07 07 09 00 190  5.0  6.0    MM    MM    MM  MM 1017.1  27.8  28.7  24.6   MM -0.6    MM
+        2020 07 07 08 50 190  5.0  6.0   0.5     9   4.5  72 1017.0  27.8  28.7  24.4   MM   MM    MM
+        2020 07 07 08 40 190  5.0  7.0   0.5    MM   4.5  72 1017.1  27.8  28.7  24.5   MM   MM    MM
+        2020 07 07 08 30 190  5.0  7.0    MM    MM    MM  MM 1017.0  27.8  28.7  24.6   MM   MM    MM
+        2020 07 07 08 20 190  5.0  6.0    MM    MM    MM  MM 1017.0  27.8  28.7  24.8   MM   MM    MM
+        2020 07 07 08 10 190  5.0  6.0    MM    MM    MM  MM 1016.9  27.7  28.7  24.6   MM   MM    MM
+        2020 07 07 08 00 180  5.0  6.0    MM    MM    MM  MM 1016.9  27.7  28.7  24.6   MM -1.2    MM
+        2020 07 07 07 50 190  5.0  6.0   0.5     9   4.9  78 1017.0  27.6  28.7  24.4   MM   MM    MM
+        2020 07 07 07 40 200  4.0  6.0    MM    MM    MM  MM 1017.1  27.6  28.7  24.7   MM   MM    MM
+        2020 07 07 07 30 200  4.0  5.0    MM    MM    MM  MM 1017.1  27.6  28.7  24.7   MM   MM    MM
+        2020 07 07 07 20 200  4.0  5.0    MM    MM    MM  MM 1017.2  27.6  28.7  24.8   MM   MM    MM
+        2020 07 07 07 10 200  5.0  6.0    MM    MM    MM  MM 1017.2  27.5  28.7  24.5   MM   MM    MM
+        2020 07 07 07 00 190  4.0  6.0    MM    MM    MM  MM 1017.2  27.5  28.7  24.6   MM -1.0    MM
+        2020 07 07 06 50 200  4.0  5.0   0.5     9   4.5  80 1017.3  27.5  28.7  24.9   MM   MM    MM
+        2020 07 07 06 40 200  5.0  6.0    MM    MM    MM  MM 1017.2  27.5  28.7  25.3   MM   MM    MM
+        2020 07 07 06 30 200  5.0  6.0    MM    MM    MM  MM 1017.3  27.6  28.7  25.1   MM   MM    MM
+        2020 07 07 06 20 200  5.0  6.0    MM    MM    MM  MM 1017.5  27.7  28.7  24.6   MM   MM    MM
+        2020 07 07 06 10 200  5.0  6.0    MM    MM    MM  MM 1017.7  27.7  28.7  24.6   MM   MM    MM
+        2020 07 07 06 00 200  5.0  6.0    MM    MM    MM  MM 1017.8  27.7    MM  24.6   MM -1.1    MM
+        2020 07 07 05 50 190  4.0  6.0   0.5     9   4.6  66 1017.8  27.6  28.8  24.5   MM   MM    MM
+        2020 07 07 05 40 190  4.0  5.0    MM    MM    MM  MM 1017.9  27.6  28.8  24.6   MM   MM    MM
+        2020 07 07 05 30 200  4.0  5.0    MM    MM    MM  MM 1018.0  27.5  28.8  24.3   MM   MM    MM
+        2020 07 07 05 20 210  3.0  4.0    MM    MM    MM  MM 1018.1  27.5  28.8  24.1   MM   MM    MM
+        2020 07 07 05 10 210  3.0  4.0    MM    MM    MM  MM 1018.1  27.5  28.8  23.8   MM   MM    MM
+        2020 07 07 05 00 210  3.0  4.0    MM    MM    MM  MM 1018.2  27.4    MM  23.8   MM +0.0    MM
+        2020 07 07 04 50 210  3.0  4.0   0.5     9   4.3  85 1018.3  27.4  28.8  23.6   MM   MM    MM
+        2020 07 07 04 40 210  3.0  4.0    MM    MM    MM  MM 1018.4  27.3  28.8  23.7   MM   MM    MM
+        2020 07 07 04 30 220  3.0  4.0    MM    MM    MM  MM 1018.3  27.2  28.8  23.7   MM   MM    MM
+        2020 07 07 04 20 230  3.0  4.0    MM    MM    MM  MM 1018.3  27.2    MM  23.6   MM   MM    MM
+        2020 07 07 04 10 240  3.0  4.0    MM    MM    MM  MM 1018.3  27.1  28.8  23.6   MM   MM    MM
+        2020 07 07 04 00 230  3.0  4.0    MM    MM    MM  MM 1018.2    MM  28.8    MM   MM +1.0    MM
+        2020 07 07 03 50 220  3.0  4.0   0.6    10   4.1  71 1018.3  27.0  28.8  23.5   MM   MM    MM
+        2020 07 07 03 40 200  3.0  4.0    MM    MM    MM  MM 1018.4  27.0  28.8  23.5   MM   MM    MM
+        2020 07 07 03 30 200  4.0  5.0    MM    MM    MM  MM 1018.4  27.0  28.8  23.4   MM   MM    MM
+        2020 07 07 03 20 210  4.0  5.0    MM    MM    MM  MM 1018.6  27.1  28.9  23.6   MM   MM    MM
+        2020 07 07 03 10 210  4.0  6.0    MM    MM    MM  MM 1018.7  27.1  28.9  23.5   MM   MM    MM
+        2020 07 07 03 00 220  4.0  6.0    MM    MM    MM  MM 1018.7  27.0  28.9  23.2   MM +1.8    MM
+        2020 07 07 02 50 210  4.0  5.0   0.7     9   4.2  64 1018.7  27.0  28.9  23.2   MM   MM    MM
+        2020 07 07 02 40 220  5.0  6.0    MM    MM    MM  MM 1018.9  26.9  28.9  23.4   MM   MM    MM
+        2020 07 07 02 30 220  6.0  7.0    MM    MM    MM  MM 1018.8  26.9  28.9  23.3   MM   MM    MM
+        2020 07 07 02 20 210  6.0  7.0    MM    MM    MM  MM 1018.7  26.9  28.9  23.4   MM   MM    MM
+        2020 07 07 02 10 220  5.0  7.0    MM    MM    MM  MM 1018.6  26.8  28.9  23.5   MM   MM    MM
+        2020 07 07 02 00 210  4.0  6.0    MM    MM    MM  MM 1018.3  26.7  28.9  23.3   MM +0.6    MM
+        2020 07 07 01 50 210  4.0  5.0   0.8     5   4.1 162 1017.9  26.5  28.9  23.2   MM   MM    MM
+        2020 07 07 01 40 210  2.0  3.0   0.8    MM   4.1 162 1017.7  26.4  29.0  23.3   MM   MM    MM
+        2020 07 07 01 30 210  3.0  5.0    MM    MM    MM  MM 1017.7  26.4  29.0  23.3   MM   MM    MM
+        2020 07 07 01 20 210  4.0  5.0    MM    MM    MM  MM 1017.5  26.3  28.9  23.4   MM   MM    MM
+        2020 07 07 01 10 220  4.0  6.0    MM    MM    MM  MM 1017.3  26.1  28.9  23.6   MM   MM    MM
+        2020 07 07 01 00 220  3.0  5.0    MM    MM    MM  MM 1017.2  25.9    MM  23.9   MM -1.2    MM
+        2020 07 07 00 50 220  3.0  4.0   1.0     5   4.2 164 1017.2  25.8  29.0  23.9   MM   MM    MM
+        2020 07 07 00 40 230  4.0  5.0   1.0    MM   4.2 164 1017.2  25.8  29.0  24.0   MM   MM    MM
+        2020 07 07 00 30 240  4.0  5.0    MM    MM    MM  MM 1017.0  25.8  29.0  24.1   MM   MM    MM
+        2020 07 07 00 20 230  4.0  5.0    MM    MM    MM  MM 1017.0  25.9  29.0  23.6   MM   MM    MM
+        2020 07 07 00 10 230  4.0  5.0    MM    MM    MM  MM 1017.0  25.9  28.9  23.9   MM   MM    MM
+        2020 07 07 00 00 230  4.0  6.0    MM    MM    MM  MM 1017.0  26.1  29.0  23.8   MM -0.9    MM
+        2020 07 06 23 50 220  5.0  6.0   1.2     5   4.1 191 1017.1  26.1  29.0  23.5   MM   MM    MM
+        2020 07 06 23 40 220  5.0  6.0    MM    MM    MM  MM 1017.3  26.1  29.0  23.7   MM   MM    MM
+        2020 07 06 23 20 220  5.0  7.0    MM    MM    MM  MM 1017.7  26.1  29.0  23.4   MM   MM    MM
+        2020 07 06 23 10 220  6.0  7.0    MM    MM    MM  MM 1017.7  26.3  29.0  23.4   MM   MM    MM
+        2020 07 06 23 00 220  7.0  8.0    MM    MM    MM  MM 1017.8  26.5  29.0  23.6   MM +0.6    MM
+        2020 07 06 22 50 250  4.0  7.0   1.0     4   3.7 194 1018.0  25.5  29.0  24.2   MM   MM    MM
+        2020 07 06 22 40 240  6.0  7.0   1.0    MM   3.7 194 1018.2  24.9  29.1  24.1   MM   MM    MM
+        2020 07 06 22 30 260  6.0  9.0    MM    MM    MM  MM 1018.2  24.7  29.1  23.8   MM   MM    MM
+        2020 07 06 22 20 270  8.0 10.0    MM    MM    MM  MM 1018.6  24.6  29.1  23.9   MM   MM    MM
+        2020 07 06 22 10 270 10.0 13.0    MM    MM    MM  MM 1018.7  24.8  29.1  24.1   MM   MM    MM
+        2020 07 06 22 00 280 12.0 16.0    MM    MM    MM  MM 1018.6  24.6  29.1  23.8   MM +1.4    MM
+        2020 07 06 21 50 270 12.0 16.0   0.8     3   3.3 173 1018.6  25.6  29.2  23.4   MM   MM    MM
+        2020 07 06 21 40 220 10.0 13.0    MM    MM    MM  MM 1018.8  26.1  29.3  24.3   MM   MM    MM
+        2020 07 06 21 30 200 11.0 14.0    MM    MM    MM  MM 1018.4  26.2  29.1  23.7   MM   MM    MM
+        2020 07 06 21 20 200 12.0 16.0    MM    MM    MM  MM 1018.2  26.6  29.2  23.9   MM   MM    MM
+        2020 07 06 21 10 180 10.0 15.0    MM    MM    MM  MM 1018.2  28.8  29.2  24.9   MM   MM    MM
+        2020 07 06 21 00 160  9.0 10.0    MM    MM    MM  MM 1017.9  29.3  29.2  24.7   MM +0.7    MM
+        2020 07 06 20 50 160  8.0 10.0   0.6     9   3.7  79 1017.9  29.2  29.2  24.6   MM   MM    MM
+        2020 07 06 20 40 150  8.0  9.0    MM    MM    MM  MM 1017.7  29.2  29.3  24.5   MM   MM    MM
+        2020 07 06 20 30 150  7.0  9.0    MM    MM    MM  MM 1017.5  29.1  29.3  24.5   MM   MM    MM
+        2020 07 06 20 20 150  7.0  9.0    MM    MM    MM  MM 1017.1  29.1  29.3  24.6   MM   MM    MM
+        2020 07 06 20 10 160  6.0  8.0    MM    MM    MM  MM 1017.0  29.0  29.3  25.0   MM   MM    MM
+        2020 07 06 20 00 150  6.0  7.0    MM    MM    MM  MM 1017.0  29.0  29.4  25.1   MM -0.7    MM
+        2020 07 06 19 50 150  6.0  7.0   0.5     9   4.6  58 1016.8  28.9  29.4  25.4   MM   MM    MM
+        2020 07 06 19 40 150  6.0  8.0    MM    MM    MM  MM 1016.5  28.8  29.3  25.2   MM   MM    MM
+        2020 07 06 19 30 150  6.0  7.0    MM    MM    MM  MM 1016.5  28.7  29.3  25.3   MM   MM    MM
+        2020 07 06 19 20 150  6.0  7.0    MM    MM    MM  MM 1016.8  28.7  29.3  25.5   MM   MM    MM
+        2020 07 06 19 10 150  5.0  7.0    MM    MM    MM  MM 1016.8  28.7  29.3  25.3   MM   MM    MM
+        2020 07 06 19 00 150  5.0  6.0    MM    MM    MM  MM 1016.9  28.7  29.3  25.2   MM -1.5    MM
+        2020 07 06 18 50 150  5.0  6.0   0.5     9   5.2  68 1017.1  28.7  29.3  25.4   MM   MM    MM
+        2020 07 06 18 40 150  5.0  6.0    MM    MM    MM  MM 1017.0  28.7  29.3  25.0   MM   MM    MM
+        2020 07 06 18 30 150  5.0  6.0    MM    MM    MM  MM 1017.0  28.6  29.3  25.2   MM   MM    MM
+        2020 07 06 18 20 150  5.0  6.0    MM    MM    MM  MM 1017.0  28.5  29.3  25.2   MM   MM    MM
+        2020 07 06 18 10 150  5.0  6.0    MM    MM    MM  MM 1017.0  28.4  29.2  25.3   MM   MM    MM
+        2020 07 06 18 00 150  5.0  6.0    MM    MM    MM  MM 1017.1  28.4  29.2  25.3   MM -1.3    MM
+        2020 07 06 17 50 160  5.0  6.0   0.5     9   5.2  62 1017.3  28.4  29.2  25.2   MM   MM    MM
+        2020 07 06 17 40 160  5.0  6.0   0.5    MM   5.2  62 1017.3  28.4  29.2  25.2   MM   MM    MM
+        2020 07 06 17 30 150  5.0  6.0    MM    MM    MM  MM 1017.3  28.3  29.0  25.0   MM   MM    MM
+        2020 07 06 17 20 160  5.0  6.0    MM    MM    MM  MM 1017.5  28.3  29.1  25.0   MM   MM    MM
+        2020 07 06 17 10 160  5.0  6.0    MM    MM    MM  MM 1017.7  28.2  29.1  25.1   MM   MM    MM
+        2020 07 06 17 00 160  5.0  6.0    MM    MM    MM  MM 1017.7  28.2  29.1  25.2   MM +0.0    MM
+        2020 07 06 16 50 170  4.0  5.0   0.4     9   5.5  80 1017.9  28.2  29.1  25.3   MM   MM    MM
+        2020 07 06 16 40 160  4.0  5.0    MM    MM    MM  MM 1017.9  28.1  29.2  25.0   MM   MM    MM
+        2020 07 06 16 30 160  4.0  6.0    MM    MM    MM  MM 1018.0  28.1  29.3  25.1   MM   MM    MM
+        2020 07 06 16 20 160  4.0  5.0    MM    MM    MM  MM 1018.2  28.1  29.4  24.9   MM   MM    MM
+        2020 07 06 16 10 160  4.0  6.0    MM    MM    MM  MM 1018.2  28.1  29.4  24.9   MM   MM    MM
+        2020 07 06 16 00 160  4.0  5.0    MM    MM    MM  MM 1018.3  28.1  29.4  25.0   MM +1.4    MM
+        2020 07 06 15 50 170  4.0  5.0   0.4     8   5.1  63 1018.3  28.0  29.4  24.9   MM   MM    MM
+        2020 07 06 15 40 170  4.0  5.0   0.4    MM   5.1  63 1018.3  27.9  29.4  24.9   MM   MM    MM
+        2020 07 06 15 30 170  4.0  5.0    MM    MM    MM  MM 1018.4  27.9  29.4  24.9   MM   MM    MM
+        2020 07 06 15 20 180  4.0  5.0    MM    MM    MM  MM 1018.3  27.9  29.4  25.2   MM   MM    MM
+        2020 07 06 15 10 170  4.0  5.0    MM    MM    MM  MM 1018.4    MM  29.3    MM   MM   MM    MM
+        2020 07 06 15 00 190  4.0  6.0    MM    MM    MM  MM 1018.4  27.8  29.4  25.2   MM +2.0    MM
+        2020 07 06 14 50 190  4.0  5.0   0.4     9   5.4  70 1018.3  27.8  29.3  25.1   MM   MM    MM
+        2020 07 06 14 40 190  4.0  5.0    MM    MM    MM  MM 1018.2  27.8  29.3  25.0   MM   MM    MM
+        2020 07 06 14 30 190  4.0  6.0    MM    MM    MM  MM 1018.0  27.8  29.4  24.9   MM   MM    MM
+    http_version: 
+  recorded_at: Sat, 11 Jul 2020 14:32:58 GMT
+recorded_with: VCR 4.0.0
