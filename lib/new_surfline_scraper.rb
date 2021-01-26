@@ -20,6 +20,13 @@ class NewSurflineScraper
       .join(' ')
       .strip
 
+    # Fix surfline's weird malformed date stamp, which has switched the month
+    # and day for some reason
+    if Date::MONTHNAMES.compact.any? {|m| updated_at_text.start_with? "#{m}," }
+      r = /^(\w+), (\w+) (.*)/
+      updated_at_text = r.match(updated_at_text) { |m| "#{m[2]}, #{m[1]} #{m[3]}" }
+    end
+
     updated_at = Chronic.parse(updated_at_text, context: :past )
 
     # Due to how surfline writes their dates, Chronic gets confused and thinks
