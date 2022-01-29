@@ -45,10 +45,6 @@ class NewSurflineScraper
     @doc ||= Nokogiri::HTML( Browser.new.get(url) )
   end
 
-  def report_element
-    @report_element ||= doc.at_css('.quiver-spot-report')
-  end
-
   def report_json
     return @report_json unless @report_json.nil?
 

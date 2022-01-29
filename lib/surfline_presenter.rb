@@ -28,7 +28,7 @@ class SurflinePresenter < SimpleDelegator
   end
 
   def spot_conditions_class
-    spot_conditions.downcase.gsub(/\W+/, '-')
+    spot_conditions.downcase.gsub(/[\W_]+/, '-')
   end
 
   private
