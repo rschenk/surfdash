@@ -1,8 +1,8 @@
 require_relative './spec_helper'
-require_relative '../lib/new_surfline_scraper'
+require_relative '../lib/surfline_scraper'
 
-describe NewSurflineScraper, vcr: { cassette_name: 'new_surfline_scraper' } do
-  subject(:scraper){ NewSurflineScraper.new }
+describe SurflineScraper, vcr: { cassette_name: 'surfline_scraper' } do
+  subject(:scraper){ SurflineScraper.new }
 
   before { Timecop.freeze(Time.local(2021, 1, 26, 11, 03)) }
   after { Timecop.return }
@@ -21,8 +21,8 @@ describe NewSurflineScraper, vcr: { cassette_name: 'new_surfline_scraper' } do
   its(:spot_conditions_report){ should_not match(/Forecast Headlines/i) }
 end
 
-xdescribe NewSurflineScraper, vcr: { cassette_name: 'new_surfline_scraper_flat' } do
-  subject(:scraper){ NewSurflineScraper.new }
+xdescribe SurflineScraper, vcr: { cassette_name: 'surfline_scraper_flat' } do
+  subject(:scraper){ SurflineScraper.new }
 
   before { Timecop.freeze(Time.local(2018, 06, 04, 20, 30)) }
   after { Timecop.return }

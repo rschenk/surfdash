@@ -2,7 +2,7 @@ require_relative './browser'
 require 'nokogiri'
 require 'chronic'
 
-class NewSurflineScraper
+class SurflineScraper
   attr_accessor :url
 
   def initialize(url=nil)

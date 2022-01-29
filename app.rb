@@ -2,7 +2,7 @@ require 'bundler/setup'
 require 'sinatra'
 require 'sinatra/json'
 require './lib/xtide'
-require './lib/new_surfline_scraper'
+require './lib/surfline_scraper'
 require './lib/surfline_presenter'
 require './lib/surfline_county_scraper'
 require './lib/surfline_county_presenter'
@@ -26,9 +26,9 @@ get '/tide.json' do
 end
 
 get '/surfline' do
-  # mock_request('new_surfline_scraper')
+  # mock_request('surfline_scraper')
 
-  erb :surfline, locals: { surfline: SurflinePresenter.new(NewSurflineScraper.new) }
+  erb :surfline, locals: { surfline: SurflinePresenter.new(SurflineScraper.new) }
 end
 
 
