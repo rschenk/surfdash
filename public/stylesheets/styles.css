@@ -249,6 +249,25 @@ section.wind-alert-wrapper {
   display: none;
 }
 
+/* Cam list tabs */
+.cam-list > a {
+  display: inline-block;
+  padding: 0 0.25rem;
+  border-left: 1px solid #d1d1d1;
+  color: #919191;
+  text-decoration: none;
+}
+
+.cam-list > a:first-of-type {
+  border: none;
+}
+
+.cam-logo {
+  height: 12px;
+  fill: #979797;
+}
+
+
 /* Wider screen */
 @media screen and (min-width:980px) {
 
@@ -266,3 +285,4 @@ section.wind-alert-wrapper {
     float: right;
   }
 }
+
