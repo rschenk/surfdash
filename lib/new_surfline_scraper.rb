@@ -10,72 +10,33 @@ class NewSurflineScraper
   end
 
   def updated_at
-    return @updated_at unless @updated_at.nil?
-
-    updated_at_text = report_element
-      .at_css('.quiver-forecaster-profile__update-container__last-update')
-      .children
-      .select { |child| child.text? }
-      .map(&:text)
-      .join(' ')
-      .strip
-
-    # Fix surfline's weird malformed date stamp, which has switched the month
-    # and day for some reason
-    if Date::MONTHNAMES.compact.any? {|m| updated_at_text.start_with? "#{m}," }
-      r = /^(\w+), (\w+) (.*)/
-      updated_at_text = r.match(updated_at_text) { |m| "#{m[2]}, #{m[1]} #{m[3]}" }
-    end
-
-    updated_at = Chronic.parse(updated_at_text, context: :past )
-
-    # Due to how surfline writes their dates, Chronic gets confused and thinks
-    # today is either a week ago
-    if Date.today - updated_at.to_date == 7
-      updated_at += 604800 # 1 week
-    end
-
-    @updated_at ||= updated_at
+    @updated_at ||= Time.at(
+       spot_report_data(%w[report timestamp])
+    )
   end
 
   def wave_range
-    @wave_range ||= report_element
-      .at_css('.quiver-surf-height')
-      .text
-      .strip
-      .gsub(/(?<!\s)FT/, ' ft')
+    @wave_range ||= (
+      min = spot_report_data(%w[forecast waveHeight min])
+      max = spot_report_data(%w[forecast waveHeight max])
+      "#{min}-#{max} ft"
+    )
   end
 
   def wave_description
-    @wave_description ||= report_element
-      .at_css('.quiver-reading-description')
-      .text
-      .strip
+    @wave_description ||= spot_report_data(%w[forecast waveHeight humanRelation])
   end
 
   def spot_conditions
-    @spot_conditions ||= report_element
-      .at_css('.quiver-colored-condition-bar')
-      .text
-      .strip
-      .downcase
+    @spot_conditions ||= spot_report_data(%w[forecast conditions value]).to_s.downcase
   end
 
   def spot_conditions_report
-    return @spot_conditions_report if @spot_conditions_report
-
-    paragraphs = report_element
-      .css('.quiver-spot-report__report-text p')
-      .lazy
-      .reject{|p| p.text.strip.empty? }
-      .reject{|p| p.text.match /Check out\s+Premium Analysis\s+for more details/i }
-      .take_while{|p| !p.text.match /Forecast Headlines/i }
-      .map{|p| p.inner_html.strip }
-      .map{|p| "<p>#{p}</p>" }
-      .to_a
-      .join
-
-    @spot_conditions_report = paragraphs
+    @spot_conditions_report ||= (
+      spot_report_data("report", "body")
+        .to_s
+        .gsub("<p><br></p>", "")
+    )
   end
 
   private
@@ -88,4 +49,16 @@ class NewSurflineScraper
     @report_element ||= doc.at_css('.quiver-spot-report')
   end
 
+  def report_json
+    return @report_json unless @report_json.nil?
+
+    data_tag = doc.xpath("//script[starts-with(text(),'window.__DATA__')]").first
+    json_text = data_tag.text.gsub(/\A\s*window.__DATA__\s*=\s*/, '')
+
+    @report_json = JSON.parse(json_text)
+  end
+  
+  def spot_report_data(*args)
+    report_json.dig(*(["spot", "report", "data"] + args).flatten)
+  end
 end

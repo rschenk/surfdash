@@ -13,10 +13,10 @@ describe NewSurflineScraper, vcr: { cassette_name: 'new_surfline_scraper' } do
     end
   end
 
-  its(:updated_at){ should eq Chronic.parse('January 26, 2021 at 7:10am') }
-  its(:wave_range){ should eq '0.5-1 ft' }
-  its(:wave_description){ should eq 'Shin to knee high' }
-  its(:spot_conditions){ should eq 'poor' }
+  its(:updated_at){ should eq Chronic.parse('January 28, 2022 at 1:19:42pm') }
+  its(:wave_range){ should eq '2-3 ft' }
+  its(:wave_description){ should eq 'Waist to stomach high' }
+  its(:spot_conditions){ should eq 'fair' }
   its(:spot_conditions_report){ should match(/^<p><strong>Central/i) }
   its(:spot_conditions_report){ should_not match(/Forecast Headlines/i) }
 end

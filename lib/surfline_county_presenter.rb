@@ -19,7 +19,6 @@ class SurflineCountyPresenter < SimpleDelegator
 
   def favorite_spots
     favorites = %w[
-      cocoa-beach-pier
       lori-wilson-park
       16th-st-south
       2nd-light
