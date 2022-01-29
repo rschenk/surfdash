@@ -6,7 +6,7 @@ class SurflineScraper
   attr_accessor :url
 
   def initialize(url=nil)
-    @url = url || 'http://www.surfline.com/surf-report/cocoa-beach-pier-florida_4421/'
+    @url = url || 'https://www.surfline.com/surf-report/cocoa-beach-pier/5842041f4e65fad6a7708872?camId=5834971de411dc743a5d5279'
   end
 
   def updated_at
