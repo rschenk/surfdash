@@ -34,18 +34,6 @@
     $('#buoy-41009-report-wrapper').html( content );
     initializeBuoy('buoy_41009')
   });
-
-  $.get( '/cflsurf', function( content ){
-    $('#cflsurf-report-wrapper').html( content );
-  });
-
-  $.get( '/freeman', function( content ){
-    $('#freeman-report-wrapper').html( content );
-  });
-
-  $.get( '/checkthewaves', function( content ){
-    $('#checkthewaves-report-wrapper').html( content );
-  });
 })();
 
 function initializeBuoy(domSlug){
@@ -55,7 +43,7 @@ function initializeBuoy(domSlug){
 
   const heightData = jsonData.map(([time, height, _period]) => [time, height])
   const periodData = jsonData.map(([time, _h, period]) => [time, period])
-  
+
   Sparkline(`#${domSlug}-height-chart`, heightData)
   Sparkline(`#${domSlug}-period-chart`, periodData)
 }

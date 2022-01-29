@@ -6,12 +6,6 @@ require './lib/new_surfline_scraper'
 require './lib/surfline_presenter'
 require './lib/surfline_county_scraper'
 require './lib/surfline_county_presenter'
-require './lib/cflsurf_scraper'
-require './lib/cflsurf_presenter'
-require './lib/freeman_scraper'
-require './lib/freeman_presenter'
-require './lib/checkthewaves_scraper'
-require './lib/checkthewaves_presenter'
 require './lib/ndbc_scraper'
 require './lib/ndbc_presenter'
 
@@ -42,23 +36,6 @@ get '/surfline-county' do
   # mock_request('surfline_county_scraper')
 
   erb :surfline_county, locals: { surfline_county: SurflineCountyPresenter.new(SurflineCountyScraper.new) }
-end
-
-get '/cflsurf' do
-  # mock_request('cflsurf_scraper')
-
-  erb :cflsurf, locals: { cflsurf: CflsurfPresenter.new(CflsurfScraper.new) }
-end
-
-get '/freeman' do
-  # mock_request('freeman_scraper')
-
-  erb :freeman, locals: { freeman: FreemanPresenter.new(FreemanScraper.new) }
-
-end
-
-get '/checkthewaves' do
-  erb :checkthewaves, locals: { checkthewaves: CheckthewavesPresenter.new(CheckthewavesScraper.new) }
 end
 
 get '/weather' do
