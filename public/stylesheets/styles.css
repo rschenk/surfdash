@@ -213,6 +213,10 @@ section.wind-alert-wrapper {
   text-align: right;
 }
 
+.forecast__item {
+  display: flex;
+}
+
 .weather__current {
   position: relative;
 }
@@ -231,7 +235,10 @@ section.wind-alert-wrapper {
   height: 18px;
   display: inline-block;
   margin: 0;
+  margin-right: 0.25rem;
 }
+
+.weather .weather__link-to-full,
 .weather .u-h {
   display: none;
 }
