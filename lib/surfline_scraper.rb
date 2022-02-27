@@ -48,13 +48,13 @@ class SurflineScraper
   def report_json
     return @report_json unless @report_json.nil?
 
-    data_tag = doc.xpath("//script[starts-with(text(),'window.__DATA__')]").first
-    json_text = data_tag.text.gsub(/\A\s*window.__DATA__\s*=\s*/, '')
+    data_tag = doc.css("script#__NEXT_DATA__").first
+    json_text = data_tag.text
 
     @report_json = JSON.parse(json_text)
   end
-  
+
   def spot_report_data(*args)
-    report_json.dig(*(["spot", "report", "data"] + args).flatten)
+    report_json.dig(*(["props", "pageProps", "ssrReduxState", "spot", "report", "data"] + args).flatten)
   end
 end

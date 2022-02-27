@@ -10,6 +10,6 @@ describe SurflineCountyScraper, vcr: { cassette_name: 'surfline_county_scraper' 
     end
   end
 
-  its(:spots) { should include SurflineCountyScraper::Spot.new('Cocoa Beach Pier', '1-2 ft', 'poor') }
-  its(:spots) { should include SurflineCountyScraper::Spot.new('Hightower Beach', '1-2 ft', 'poor') }
+  its(:spots) { should include SurflineCountyScraper::Spot.new('Cocoa Beach Pier', '2-3 ft', 'fair') }
+  its(:spots) { should include SurflineCountyScraper::Spot.new('Hightower Beach', '3-4 ft', 'fair') }
 end

@@ -18,20 +18,27 @@ class SurflineCountyScraper
   private
 
   def scrape_spots
-    doc.css('.sl-spot-list__spots .quiver-spot-list-item__container')
+    report_json
+      .dig('props', 'pageProps', 'ssrReduxState', 'map', 'spots')
       .map { |spot| scrape_spot spot }
       .uniq { |spot| spot.name }
   end
 
-  def scrape_spot(el)
-    name = el.css('.quiver-spot-details__name').text.strip
-    conditions = el.css('.quiver-surf-conditions').first.text.strip.downcase
-    wave_range = el.css('.quiver-surf-height')
-      .text
-      .strip
-      .gsub(/(?<!\s)FT/, ' ft')
+  def scrape_spot(spot_json)
+    name = spot_json['name']
+    conditions = spot_json.dig('conditions', 'value').to_s.downcase
+    wave_range = "#{spot_json.dig('waveHeight', 'min')}-#{spot_json.dig('waveHeight', 'max')} ft"
 
     Spot.new(name, wave_range, conditions)
+  end
+
+  def report_json
+    return @report_json unless @report_json.nil?
+
+    data_tag = doc.css("script#__NEXT_DATA__").first
+    json_text = data_tag.text
+
+    @report_json = JSON.parse(json_text)
   end
 
   def doc

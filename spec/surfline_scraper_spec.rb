@@ -13,9 +13,9 @@ describe SurflineScraper, vcr: { cassette_name: 'surfline_scraper' } do
     end
   end
 
-  its(:updated_at){ should eq Chronic.parse('January 28, 2022 at 1:19:42pm') }
+  its(:updated_at){ should be_within(120).of(Chronic.parse('February 26, 2022 at 6:56 am')) }
   its(:wave_range){ should eq '2-3 ft' }
-  its(:wave_description){ should eq 'Waist to stomach high' }
+  its(:wave_description){ should eq 'Thigh to waist' }
   its(:spot_conditions){ should eq 'fair' }
   its(:spot_conditions_report){ should match(/^<p><strong>Central/i) }
   its(:spot_conditions_report){ should_not match(/Forecast Headlines/i) }

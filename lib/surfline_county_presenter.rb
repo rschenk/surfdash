@@ -1,7 +1,7 @@
 class SurflineCountyPresenter < SimpleDelegator
   class Spot < SimpleDelegator
     def conditions_class
-      conditions.downcase.gsub(/\W+/, '-')
+      conditions.downcase.gsub(/[\W_]+/, '-')
     end
 
     def id
