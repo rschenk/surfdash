@@ -41,9 +41,5 @@ function initializeBuoy(domSlug){
   const jsonText = jsonNode.textContent;
   const jsonData = JSON.parse(jsonText);
 
-  const heightData = jsonData.map(([time, height, _period]) => [time, height])
-  const periodData = jsonData.map(([time, _h, period]) => [time, period])
-
-  Sparkline(`#${domSlug}-height-chart`, heightData)
-  Sparkline(`#${domSlug}-period-chart`, periodData)
+  BuoyChart(`#${domSlug}-buoy-chart`, jsonData)
 }

@@ -27,7 +27,9 @@ describe NdbcScraper, vcr: { cassette_name: 'ndbc_scraper' } do
       expect(series.last[0]).to be_within(1).of(Chronic.parse('June 12 2020 at 11:50 AM'))
 
       expect(series.first[1]).to be_within(0.1).of(2.9) # Height
-      expect(series.first[2]).to eq 6 # Period
+      expect(series.first[2]).to eq 6 # Dominant period
+      expect(series.first[3]).to be_within(0.1).of(4.4) # Average period
+      expect(series.first[4]).to eq 'E' # Direction
     end
   end
 end

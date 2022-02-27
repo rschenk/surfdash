@@ -44,7 +44,7 @@ get '/weather' do
 end
 
 get '/buoy_41113' do
-  # mock_request('ndbc_scraper_web') do
+  # mock_request('ndbc_scraper_web_41113') do
     erb :ndbc, locals: {
       title: 'Canaveral Nearshore',
       buoy: NdbcPresenter.new(NdbcScraper.new(41113))
@@ -53,7 +53,7 @@ get '/buoy_41113' do
 end
 
 get '/buoy_41009' do
-  # mock_request('ndbc_scraper_web') do
+  # mock_request('ndbc_scraper_web_41009') do
     erb :ndbc, locals: {
       title: 'Canaveral 20 Mile',
       buoy: NdbcPresenter.new(NdbcScraper.new(41009))

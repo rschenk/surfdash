@@ -38,9 +38,7 @@ class NdbcScraper
   end
 
   def direction
-    val = ((most_recent_reading['MWD']/22.5)+0.5).to_i
-    directions = ["N","NNE","NE","ENE","E","ESE", "SE", "SSE","S","SSW","SW","WSW","W","WNW","NW","NNW"]
-    directions[val % 16]
+    deg_to_human most_recent_reading['MWD']
   end
 
   def water_temp
@@ -53,7 +51,7 @@ class NdbcScraper
     parsed_data
       .lazy
       .filter { |row| row['time'] >= cutoff }
-      .map { |row| [row['time'], m_to_ft(row['WVHT']), row['DPD']] }
+      .map { |row| [row['time'], m_to_ft(row['WVHT']), row['DPD'], row['APD'], deg_to_human(row['MWD'])] }
       .sort_by { |time, _height| time }
   end
 
@@ -100,5 +98,11 @@ class NdbcScraper
       ).getlocal
       hash
     }
+  end
+
+  def deg_to_human(deg)
+    val = ((deg/22.5)+0.5).to_i
+    directions = ["N","NNE","NE","ENE","E","ESE", "SE", "SSE","S","SSW","SW","WSW","W","WNW","NW","NNW"]
+    directions[val % 16]
   end
 end
