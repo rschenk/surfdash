@@ -1,5 +1,6 @@
 const BuoyChart = (containerSelector, data) => {
   const selection = d3.select(containerSelector)
+  const globalMargin = { top: 0, right: 0, bottom: 14, left: 0 }
   const margin = { top: 2, right: 6, bottom: 2, left: 2 }
   const width = 300
   const chartHeight = 30 + margin.top + margin.bottom
@@ -27,9 +28,15 @@ const BuoyChart = (containerSelector, data) => {
     .range([chartHeight - margin.top - margin.bottom, margin.top])
     .interpolate(d3.interpolateRound)
 
-  const xAxis = d3.axisBottom(x)
+  const midnightTickmarksAxis = d3.axisBottom(x)
     .ticks(d3.timeDay)
     .tickSize(height)
+    .tickFormat('') // no labels
+
+  const dayLabelsAxis = d3.axisBottom(x)
+    .ticks(d3.timeHour, 12) // ticks at noon and midnight
+    .tickSize(0) // no actual tickmarks
+    .tickFormat(dayTickFormat)
 
   const heightLine = d3.line()
     .x(d => x(d[0]))
@@ -48,16 +55,26 @@ const BuoyChart = (containerSelector, data) => {
   const svg = selection
     .append('svg')
     .attr('class', 'buoy--charts')
-    .attr('viewBox', [0, 0, width, height])
+    .attr('viewBox', [0, 0, width, height + (globalMargin.top + globalMargin.bottom)])
     // Uncomment below for fixed size
     .attr('width', width)
     .attr('height', height)
 
-  const _axis = svg.append('g')
+  const axisWrapper = svg.append('g')
+    .attr('class', 'axisWrapper')
+    .attr('transform', `translate(${margin.left}, 0)`)
+
+  const _tickAxis = axisWrapper.append('g')
     .attr('class', 'axis axis--x')
-    .call(xAxis)
+    .call(midnightTickmarksAxis)
     .call(g => g.select('.domain').remove())
     .call(g => g.selectAll('.tick text').remove())
+
+  const _labelAxis = axisWrapper.append('g')
+  .attr('class', 'axis axis--x')
+  .attr('transform', `translate(0, ${height})`)
+  .call(dayLabelsAxis)
+  .call(g => g.select('.domain').remove())
 
   const heightChartWrapper = svg.append('g')
     .attr('class', 'chartWrapper')
@@ -94,6 +111,45 @@ const BuoyChart = (containerSelector, data) => {
     .attr('class', 'point-marker point-marker--period')
     .attr('r', 2)
     .attr('transform', 'translate(0.5, 0.5)') // undo the sharp line trick
+
+  /* Helpers */
+  function isToday(date) {
+    const today = new Date()
+    return(
+      date.getDate() === today.getDate() &&
+      date.getMonth() === today.getMonth() &&
+      date.getYear() === today.getYear()
+    )
+  }
+
+  function isYesterday(date) {
+    let clone = new Date(date.getTime())
+    clone.setDate(date.getDate() + 1)
+    return isToday(clone)
+  }
+
+  function isThisWeek(date) {
+    let lastWeek = new Date()
+    lastWeek.setDate(lastWeek.getDate() - 7)
+    return date > lastWeek
+  }
+
+  function dayTickFormat(date) {
+    // Draw label only at noon
+    if (date.getHours() !== 12) { return null }
+    if(isToday(date)) { return "today" }
+    if(isYesterday(date)) { return "yesterday" }
+
+    let formatter;
+
+    if(isThisWeek()) {
+      formatter = d3.timeFormat('%A')
+    } else {
+      formatter = d3.timeFormat('%a %d')
+    }
+
+    return formatter(date).toString().toLowerCase()
+  }
 
   /* Interactivity */
 

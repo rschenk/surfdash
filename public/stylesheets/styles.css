@@ -87,6 +87,10 @@ section.wind-alert-wrapper {
   fill: red;
 }
 
+.buoy--charts .axis .tick {
+  color: #b7b7b7;
+}
+
 /* Surfline Report */
 .report-wrapper {
   margin-bottom: 36px;
