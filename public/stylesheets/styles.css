@@ -83,12 +83,13 @@ section.wind-alert-wrapper {
   stroke: #e3e3e3;
 }
 
-.buoy--charts .point-marker {
-  fill: red;
+.buoy--charts .tick text {
+  color: #b7b7b7;
+  font-size: 13px;
 }
 
-.buoy--charts .axis .tick {
-  color: #b7b7b7;
+.buoy--charts .point-marker {
+  fill: red;
 }
 
 /* Surfline Report */

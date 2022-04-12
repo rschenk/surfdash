@@ -142,7 +142,7 @@ const BuoyChart = (containerSelector, data) => {
 
     let formatter;
 
-    if(isThisWeek()) {
+    if(isThisWeek(date)) {
       formatter = d3.timeFormat('%A')
     } else {
       formatter = d3.timeFormat('%a %d')
